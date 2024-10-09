@@ -67,6 +67,9 @@ body {
     justify-content: center;
 }
 
+.bg-black {
+    background: #000 !important;
+}
 
 /* -------------------------------- Media Queries */
 
