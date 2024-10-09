@@ -62,15 +62,11 @@ body {
     border-radius: 10px; 
     display: inline-block; 
 }
+
 .navbar {
-    display: flex;
     justify-content: center;
 }
-.navbar-nav {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
+
 
 /* -------------------------------- Media Queries */
 
