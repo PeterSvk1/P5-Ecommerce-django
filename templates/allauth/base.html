@@ -1,8 +1,10 @@
+{% load static %}
+
 <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -16,9 +18,13 @@
     <title>SW shop</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    {% if messages %}
+        <div class ="message-container"></div>
+    {% endif %}
 
-
+    {% block content %}
+        <div class ="message-container"></div>
+    {% endblock %}
 
 
 
