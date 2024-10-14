@@ -76,10 +76,30 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
-	z-index: -1;
+
 }
 
+a.category-badge > span.badge:hover {
+    background: #000 !important;
+    color: azure !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: azure;
+}
+
+.btt-button:hover {
+    background-color: yellow;
+}
+
+.btn-link {
+    cursor: pointer;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
