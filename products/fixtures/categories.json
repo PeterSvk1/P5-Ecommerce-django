@@ -1,0 +1,8 @@
+[
+{"pk": 1, "model": "products.category","fields": {"name": "legos", "friendly_name": "Legos"}}, 
+{"pk": 2, "model": "products.category", "fields": {"name": "fluffy_toys", "friendly_name": "Fluffy toys"}},
+{"pk": 3, "model": "products.category", "fields": {"name": "single_handed", "friendly_name": "Single handed"}}, 
+{"pk": 4, "model": "products.category", "fields": {"name": "double_sided", "friendly_name": "Double sided"}}, 
+{"pk": 5, "model": "products.category", "fields": {"name": "hot_items", "friendly_name": "Hot Items"}}, 
+{"pk": 6, "model": "products.category", "fields": {"name": "deals", "friendly_name": "Deals"}} 
+]

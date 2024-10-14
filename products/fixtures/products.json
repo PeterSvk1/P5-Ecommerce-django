@@ -1,0 +1,25 @@
+[
+{"model": "products.product", "pk": 1, "fields": {"category": 1, "sku": "CT001", "name": "Xwing", "description": "X-wing lego for kids 7+.", "price": "10.00", "rating": "4.50", "image_url": null, "image": "xwing2.jpg"}}, 
+{"model": "products.product", "pk": 2, "fields": {"category": 1, "sku": "CT002", "name": "Dstar", "description": "D-star lego for kids and adults.", "price": "13.00", "rating": "4.00", "image_url": null, "image": "dstar.jpg"}}, 
+{"model": "products.product", "pk": 3, "fields": {"category": 1, "sku": "CT003", "name": "Falcon", "description": "Falcon ledo for lover of Han Solo.", "price": "10.00", "rating": "4.50", "image_url": null, "image": "falcon2.jpg"}}, 
+
+{"model": "products.product", "pk": 4, "fields": {"category": 2, "sku": "CT004", "name": "R2d2", "description": "Fluffy toy of r2d2 for kids and adults!", "price": "11.00", "rating": "4.00", "image_url": null, "image": "r2d2.jpg"}}, 
+{"model": "products.product", "pk": 5, "fields": {"category": 2, "sku": "CT005", "name": "Chewy", "description": "Fluffy toy of Chewbaca for kids and adults!", "price": "12.00", "rating": "4.50", "image_url": null, "image": "chewy.jpg"}}, 
+{"model": "products.product", "pk": 6, "fields": {"category": 2, "sku": "CT006", "name": "Yoda", "description": "Fluffy toy of Baby yoda for kids and adults!", "price": "13.00", "rating": "3.50", "image_url": null, "image": "yoda.jpg"}}, 
+
+{"model": "products.product", "pk": 7, "fields": {"category": 3, "sku": "CT007", "name": "lightsaber1", "description": "Lightsaber for kids and adults. Use with caution !!! Can cut if you use enough imagination.", "price": "10.00", "rating": "3.50", "image_url": null, "image": "lightsaber1.jpg"}}, 
+{"model": "products.product", "pk": 8, "fields": {"category": 3, "sku": "CT008", "name": "lightsaber2", "description": "Lightsaber for kids and adults. Use with caution !!! Can cut if you use enough imagination.", "price": "11.00", "rating": "4.50", "image_url": null, "image": "lightsaber2.jpg"}}, 
+{"model": "products.product", "pk": 9, "fields": {"category": 3, "sku": "CT009", "name": "lightsaber3", "description": "Lightsaber for kids and adults. Use with caution !!! Can cut if you use enough imagination.", "price": "10.00", "rating": "4.00", "image_url": null, "image": "lightsaber3.jpg"}}, 
+
+{"model": "products.product", "pk": 10, "fields": {"category": 4, "sku": "CT010", "name": "Doublesided1", "description": "Double-sided ightsaber for kids and adults. Use with caution !!! Can cut if you use enough imagination.", "price": "12.00", "rating": "3.50", "image_url": null, "image": "doublesided1.jpg"}}, 
+{"model": "products.product", "pk": 11, "fields": {"category": 4, "sku": "CT011", "name": "Doublesided2", "description": "Double-sided for kids and adults. Use with caution !!! Can cut if you use enough imagination.", "price": "11.00", "rating": "4.50", "image_url": null, "image": "doublesided2.jpg"}}, 
+{"model": "products.product", "pk": 12, "fields": {"category": 4, "sku": "CT012", "name": "Doublesided3", "description": "Double-sided for kids and adults. Use with caution !!! Can cut if you use enough imagination.", "price": "12.00", "rating": "4.00", "image_url": null, "image": "doublesided3.jpg"}}, 
+
+{"model": "products.product", "pk": 13, "fields": {"category": 5, "sku": "CT013", "name": "figurine1", "description": "Customer favourite figurines ! All kinds of them.", "price": "13.00", "rating": "3.50", "image_url": null, "image": "figurines1.jpg"}}, 
+{"model": "products.product", "pk": 14, "fields": {"category": 5, "sku": "CT014", "name": "figurine2", "description": "Customer favourite figurines ! All kinds of them.", "price": "11.00", "rating": "4.00", "image_url": null, "image": "figurines2.jpg"}}, 
+{"model": "products.product", "pk": 15, "fields": {"category": 5, "sku": "CT015", "name": "parody1", "description": "Customer favourite figurines ! All kinds of them.", "price": "13.00", "rating": "3.50", "image_url": null, "image": "parody1.jpg"}}, 
+
+{"model": "products.product", "pk": 16, "fields": {"category": 6, "sku": "CT016", "name": "deal1", "description": "Pillows for your home !!! enjoy our selection of pillows for proper star wars fans.", "price": "10.00", "rating": "4.50", "image_url": null, "image": "deal1.jpg"}}, 
+{"model": "products.product", "pk": 17, "fields": {"category": 6, "sku": "CT017", "name": "deal2", "description": "Pillows for your home !!! enjoy our selection of pillows for proper star wars fans.", "price": "12.00", "rating": "4.00", "image_url": null, "image": "deal2.jpg"}}, 
+{"model": "products.product", "pk": 18, "fields": {"category": 6, "sku": "CT018", "name": "deal3", "description": "Pillows for your home !!! enjoy our selection of pillows for proper star wars fans.", "price": "11.00", "rating": "4.50", "image_url": null, "image": "deal3.jpg"}}
+]
