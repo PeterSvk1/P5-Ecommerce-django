@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect, reverse
 
 def view_bag(request):
     """ A view that renders the bag contents page """
-
+     
     return render(request, 'bag/bag.html')
 
 def add_to_bag(request, item_id):
@@ -27,13 +27,13 @@ def adjust_bag(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
     bag = request.session.get('bag', {})
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('quantity', 0))
 
     if quantity > 0:
         bag[item_id] = quantity
     else:
         if item_id in bag:
-            bag.pop(item_id)
+            bag.pop(item_id, None)
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
