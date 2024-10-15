@@ -42,6 +42,10 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
+            if not products.exists():
+                messages.info(request, "No products found matching your search criteria.")
+                return redirect(reverse('products'))
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
