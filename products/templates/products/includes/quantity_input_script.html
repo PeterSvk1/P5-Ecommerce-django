@@ -1,0 +1,21 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Decrement button
+        document.getElementById("decrement-{{ product.id }}").addEventListener("click", function() {
+            var qtyInput = document.getElementById("id_qty_{{ product.id }}");
+            var qty = parseInt(qtyInput.value);
+            if (qty > 1) {
+                qtyInput.value = qty - 1;
+            }
+        });
+
+        // Increment button
+        document.getElementById("increment-{{ product.id }}").addEventListener("click", function() {
+            var qtyInput = document.getElementById("id_qty_{{ product.id }}");
+            var qty = parseInt(qtyInput.value);
+            if (qty < 99) { // Assuming max quantity is 99
+                qtyInput.value = qty + 1;
+            }
+        });
+    });
+</script>

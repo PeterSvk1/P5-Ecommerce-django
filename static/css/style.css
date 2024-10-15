@@ -106,6 +106,31 @@ a.category-badge > span.badge:hover {
 .btn-link {
     cursor: pointer;
 }
+
+/* Decrement button (-) styles */
+button[id^="decrement-"] {
+    background-color: #f44336; /* Red color */
+    color: white;
+    border-color: #f44336;
+}
+
+button[id^="decrement-"]:hover {
+    background-color: #9d1212; /* Darker red on hover */
+    border-color: #871818;
+}
+
+/* Increment button (+) styles */
+button[id^="increment-"] {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border-color: #4CAF50;
+}
+
+button[id^="increment-"]:hover {
+    background-color: #08600b; /* Darker green on hover */
+    border-color: #388E3C;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
