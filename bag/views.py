@@ -18,15 +18,19 @@ def add_to_bag(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
-    if item_id in list(bag.keys()):
-        bag[item_id] += quantity
-        messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+    current_quantity = bag.get(item_id, 0)
+    new_quantity = current_quantity + quantity
+    
+    if new_quantity > 5:
+        bag[item_id] = 5
+        messages.error(request, f'Sorry, you can only have a maximum of 5 {product.name} in your bag.')
     else:
-        bag[item_id] = quantity
-        messages.success(request, f'Added {product.name} x {bag[item_id]} to your bag ')
+        bag[item_id] = new_quantity
+        messages.success(request, f'Added {quantity} more {product.name} to your bag. Total: {bag[item_id]}')
 
+   
     request.session['bag'] = bag
-    print(request.session['bag'])
+
     return redirect(redirect_url)
 
 def adjust_bag(request, item_id):
