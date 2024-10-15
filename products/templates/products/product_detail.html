@@ -52,15 +52,24 @@
                                     <div class="input-group">
                                         <!-- Decrement Button -->
                                         <div class="input-group-prepend">
-                                            <button class="btn btn-outline-secondary" type="button" id="decrement-{{ product.id }}">-</button>
-                                        </div>
-                    
-                                        <!-- Quantity Input -->
-                                        <input class="form-control qty_input text-center" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" readonly>
-                    
-                                        <!-- Increment Button -->
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="increment-{{ product.id }}">+</button>
+                                            <button class="decrement-qty btn btn-sm btn-black rounded-0" 
+                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                            <span>
+                                                <i class="fas fa-minus fa-sm"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <input class="form-control form-control-sm qty_input" type="number"
+                                        name="quantity" value="1" min="1" max="99"
+                                        data-item_id="{{ item.item_id }}"
+                                        id="id_qty_{{ item.item_id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
+                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}" readonly>
+                                            <span>
+                                                <i class="fas fa-plus fa-sm"></i>
+                                            </span>
+                                        </button>
                                         </div>
                                     </div>
                                 </div>

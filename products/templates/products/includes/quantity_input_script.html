@@ -1,21 +1,37 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Decrement button
-        document.getElementById("decrement-{{ product.id }}").addEventListener("click", function() {
-            var qtyInput = document.getElementById("id_qty_{{ product.id }}");
-            var qty = parseInt(qtyInput.value);
-            if (qty > 1) {
-                qtyInput.value = qty - 1;
-            }
+        // Select all decrement buttons
+        const decrementButtons = document.querySelectorAll('.decrement-qty');
+        const incrementButtons = document.querySelectorAll('.increment-qty');
+    
+        // Decrement button event listener
+        decrementButtons.forEach(function(button) {
+            button.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent form submission
+                const qtyInput = document.getElementById(`id_qty_${this.getAttribute('data-item_id')}`);
+                let qty = parseInt(qtyInput.value);
+                if (qty > 1) {
+                    qtyInput.value = qty - 1;
+                    console.log(`New Qty After Decrement: ${qtyInput.value}`); 
+                } else {
+                    
+                }
+            });
         });
-
-        // Increment button
-        document.getElementById("increment-{{ product.id }}").addEventListener("click", function() {
-            var qtyInput = document.getElementById("id_qty_{{ product.id }}");
-            var qty = parseInt(qtyInput.value);
-            if (qty < 99) {
-                qtyInput.value = qty + 1;
-            }
+    
+        // Increment button event listener
+        incrementButtons.forEach(function(button) {
+            button.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent form submission
+                const qtyInput = document.getElementById(`id_qty_${this.getAttribute('data-item_id')}`);
+                let qty = parseInt(qtyInput.value);
+                if (qty < 99) {
+                    qtyInput.value = qty + 1;
+                    console.log(`New Qty After Increment: ${qtyInput.value}`); 
+                } else {
+                     
+                }
+            });
         });
     });
-</script>
+    </script>
