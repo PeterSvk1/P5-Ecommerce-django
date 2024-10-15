@@ -124,7 +124,20 @@
 
     {% block postloadjs %}
     <script type="text/javascript">
-        $('.toast').toast('show');
+    $(document).ready(function() {
+        // Show all toast messages and enable auto-hide
+        $('.toast').each(function() {
+            $(this).toast({
+                autohide: true, // Enable auto-hide
+                delay: 3000     // Set the duration for auto-hide in milliseconds
+            }).toast('show'); // Show the toast
+        });
+
+        // Close button functionality
+        $('.toast .close').on('click', function() {
+            $(this).closest('.toast').toast('hide'); // Hide the specific toast
+        });
+    });
     </script>
     {% endblock %}
 
