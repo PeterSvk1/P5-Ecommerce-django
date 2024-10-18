@@ -30,7 +30,7 @@ SECRET_KEY = '123456789'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-petersvk1-p5ecommercedj-e10t39srj5d.ws.codeinstitute-ide.net','*.herokuapp.com']
+ALLOWED_HOSTS = ['8000-petersvk1-p5ecommercedj-e10t39srj5d.ws.codeinstitute-ide.net','swshop-c6f30bb69fd8.herokuapp.com']
 
 
 # Application definition
