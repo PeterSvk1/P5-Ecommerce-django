@@ -94,6 +94,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sw_shop.wsgi.application'
 
+LOGIN_REDIRECT_URL = '/products/'
+
 SITE_ID = 1
 
 # Database
