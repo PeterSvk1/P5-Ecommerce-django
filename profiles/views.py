@@ -5,7 +5,7 @@ from .models import UserProfile
 from .forms import UserProfileForm
 from wishlistapp.models import WishlistItem
 from checkout.models import Order
-
+from reviews.models import Review
 
 @login_required
 def profile(request):
@@ -14,6 +14,9 @@ def profile(request):
 
     # Fetch wishlist items for the user
     wishlist_items = WishlistItem.objects.filter(user=request.user)
+
+    # Fetch reviews for the user
+    reviews = Review.objects.filter(user=request.user)  # Get reviews made by the user
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -32,7 +35,8 @@ def profile(request):
     context = {
         'form': form,
         'orders': orders,
-        'wishlist_items': wishlist_items,  # Add wishlist items to context
+        'wishlist_items': wishlist_items,
+        'reviews': reviews,
         'on_profile_page': True
     }
 

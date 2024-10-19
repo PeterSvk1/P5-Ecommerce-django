@@ -84,6 +84,18 @@
                     <li>Your wishlist is empty.</li>
                 {% endfor %}
             </ul>
+
+            <h3>Reviewed Products</h3>
+    <ul>
+        {% for review in reviews %}
+            <li>
+                <strong>{{ review.product.name }}</strong>: {{ review.comment }}
+                <p><em>Posted on {{ review.created_at }}</em></p>
+            </li>
+        {% empty %}
+            <li>No reviews yet.</li>
+        {% endfor %}
+    </ul>
         </div>
 {% endblock %}
 
