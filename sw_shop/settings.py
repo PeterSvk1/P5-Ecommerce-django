@@ -25,12 +25,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '123456789'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-petersvk1-p5ecommercedj-e10t39srj5d.ws.codeinstitute-ide.net','swshop-c6f30bb69fd8.herokuapp.com']
+ALLOWED_HOSTS = [
+                '8000-petersvk1-p5ecommercedj-e10t39srj5d.ws.codeinstitute-ide.net',
+                'swshop-c6f30bb69fd8.herokuapp.com'
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-petersvk1-p5ecommercedj-e10t39srj5d.ws.codeinstitute-ide.net',
+    'https://swshop-c6f30bb69fd8.herokuapp.com',
+]
 
 
 # Application definition
@@ -203,4 +211,19 @@ STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
 #STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
-DEFAULT_FROM_EMAIL = 'sw_shop@testcom'
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_EMAIL')
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+
+# Allauth settings
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
