@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from reviews.forms import ReviewForm
+from reviews.models import Review
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -59,13 +61,28 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+@login_required
 def product_detail(request, product_id):
     """ A view to show individual product details """
-
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.all()  # Get reviews for the product
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.product = product
+            review.save()
+            messages.success(request, 'Your review has been submitted!')
+            return redirect(reverse('product_detail', args=[product.id]))  # Redirect to the same product detail page
+    else:
+        form = ReviewForm()
 
     context = {
         'product': product,
+        'form': form,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_detail.html', context)

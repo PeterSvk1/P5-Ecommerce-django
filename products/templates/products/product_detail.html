@@ -81,13 +81,31 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
+                    <h3>Leave a Review</h3>
+                    <form action="{% url 'product_detail' product.id %}" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </form>
+                    
+                    <h3>Reviews</h3>
+                    <ul>
+                        {% for review in reviews %}
+                            <li>
+                                <strong>{{ review.user.username }}:</strong>
+                                <p>{{ review.comment }}</p>
+                                <p><em>Posted on {{ review.created_at }}</em></p>
+                            </li>
+                        {% empty %}
+                            <li>No reviews yet.</li>
+                        {% endfor %}
+                    </ul>
 
                 </div>
             </div>
         </div>
     </div>
-{% endblock %}
-
+    {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
