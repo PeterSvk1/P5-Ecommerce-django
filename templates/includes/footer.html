@@ -7,17 +7,17 @@
             <a href="{% url 'home' %}">
                 <img src="{{ MEDIA_URL }}galaxy.png" alt="Logo" class="logo1">
             </a>
-            <p>We are happy you decided to shop with us !!!</p>
+            <p>We are happy you decided to shop with us!</p>
         </div>
         <div class="col">
             <h3>Where to find us <div class="underline"><span></span></div></h3>
             <p>Ireland</p>
-            <p>right street, 2555</p>
+            <p>Right Street, 2555</p>
             <p class="email-id">Email: test@test.test</p>
             <h5>Phone: 123456789</h5>
         </div>
         <div class="col">
-            <h3>Links<div class="underline"><span></span></div></h3>
+            <h3>Links <div class="underline"><span></span></div></h3>
             <ul>
                 <li><a href="{% url 'contact' %}">Contact Us</a></li>
                 <li><a href="">Facebook</a></li>
@@ -26,10 +26,10 @@
             </ul>
         </div>
         <div class="col">
-            <h3>Newsletter:<div class="underline"><span></span></div></h3>
+            <h3>Newsletter: <div class="underline"><span></span></div></h3>
             <form action="{% url 'subscribe' %}" class="subs" method="post">
                 {% csrf_token %}
-                <i class="far fa-solid fa-envelope big"></i>  
+                <i class="far fa-solid fa-envelope big"></i>
                 <input type="email" name="email" placeholder="Enter your email" required>
                 <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
             </form>
@@ -37,5 +37,5 @@
         <div class="col"></div>
     </div>
     <hr>
-    <p class="copy"> Created by your lovely developer</p>
+    <p class="copy">Created by your lovely developer</p>
 </footer>
