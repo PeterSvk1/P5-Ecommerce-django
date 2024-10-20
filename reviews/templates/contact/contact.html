@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container custom-margin">  <!-- Add custom-margin class -->
+    <h1 class="text-center mb-4">Contact Us</h1>
+    <p class="text-center mb-4">Hello! We’re glad you’re here. Please feel free to send us a message with any questions or feedback. And don’t forget to check out our amazing products!</p>
+
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white text-center">
+            <h4>Send Us a Message</h4>
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    {{ form.name }}  <!-- Rendered with the custom widget -->
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    {{ form.email }}  <!-- Rendered with the custom widget -->
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    {{ form.message }}  <!-- Rendered with the custom widget -->
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .custom-margin {
+    margin-top: 200px;  /* Add this CSS for 50px margin */
+    }
+    .card {
+        border: none;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+</style>
+{% endblock %}
