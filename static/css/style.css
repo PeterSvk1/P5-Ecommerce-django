@@ -23,7 +23,7 @@ body {
     min-height: 100vh;
 }
 
-.card {
+.card1 {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.55); /* Adjust the alpha for transparency */
@@ -31,6 +31,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.125);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
     margin: 10px;
+    padding-top: 10px;
 }
 
 /* from Bulma */
