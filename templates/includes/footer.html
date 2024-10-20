@@ -7,7 +7,7 @@
             <a href="{% url 'home' %}">
                 <img src="{{ MEDIA_URL }}galaxy.png" alt="Logo" class="logo1">
             </a>
-            <p>Plase subscribe to our newsletter.</p>
+            <p>Please subscribe to our newsletter.</p>
         </div>
         <div class="col">
             <h3>Where to find us</h3>
@@ -19,15 +19,19 @@
         <div class="col">
             <h3>Links</h3>
             <ul>
-                <li><a href=""></a>Contact US</li>
-                <li><a href=""></a>Facebook</li>
-                <li><a href=""></a>Twitter</li>
-                <li><a href=""></a>Youtube</li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+                <li><a href="">YouTube</a></li>
             </ul>
         </div>
         <div class="col">
-            <h3>Newsletter:
-            </h3>
+            <h3>Newsletter:</h3>
+            <form action="{% url 'subscribe' %}" method="post">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
         </div>
         <div class="col"></div>
     </div>
