@@ -1,5 +1,6 @@
 html {
     height: 100%;
+
 }
 
 body {
@@ -8,7 +9,10 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
+    min-height: 100vh;
+    padding-top: 70px; /* Adjust this value according to your navbar height */
 }
+
 
 /* from Bulma */
 .icon {
@@ -270,7 +274,6 @@ button[id^="increment-"]:hover {
     border-radius: 0;
 }
 /* -------------------------------- Media Queries */
-
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {

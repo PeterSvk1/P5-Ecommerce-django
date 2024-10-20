@@ -94,7 +94,7 @@ form button .fa-solid {
     color: #ffffff; /* Set button icon color to white */
 }
 
-hr {
+.hr1 {
     width: 90%;
     border: 0;
     border-bottom: 2px solid #ccc;
