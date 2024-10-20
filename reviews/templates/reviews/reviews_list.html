@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">User Reviews</h1>
+    <div class="list-group">
+        {% for review in reviews %}
+            <div class="list-group-item">
+                <div class="d-flex align-items-start">
+                    {% if review.product.image %}  {# Assuming you have an 'image' field in your Product model #}
+                        <img src="{{ review.product.image.url }}" alt="{{ review.product.name }}" class="img-thumbnail me-3" style="width: 100px; height: auto;">
+                    {% endif %}
+                    <div>
+                        <h5 class="mb-1">
+                            <a href="{% url 'product_detail' review.product.id %}">{{ review.product.name }}</a>
+                        </h5>
+                        <p class="mb-1">Rating: {{ review.rating }}</p>
+                        <p class="mb-1">{{ review.comment }}</p>
+                        <small class="text-muted">Reviewed by {{ review.user.username }} on {{ review.created_at }}</small>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="list-group-item">
+                <p>No reviews available.</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -24,3 +24,7 @@ def submit_review(request, product_id):
         form = ReviewForm()
 
     return render(request, 'reviews/review_form.html', {'form': form, 'product': product})
+
+def reviews_list_view(request):
+    reviews = Review.objects.all().select_related('product', 'user')
+    return render(request, 'reviews/reviews_list.html', {'reviews': reviews})
