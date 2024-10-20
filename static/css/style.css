@@ -13,6 +13,15 @@ body {
     padding-top: 70px; /* Adjust this value according to your navbar height */
 }
 
+.custom-margin1{
+    padding-top: 160px; /* Adjust this value according to your navbar height */
+    min-height: 100vh;
+}
+
+.custom-margin2{
+    padding-top: 60px; /* Adjust this value according to your navbar height */
+    min-height: 100vh;
+}
 
 /* from Bulma */
 .icon {

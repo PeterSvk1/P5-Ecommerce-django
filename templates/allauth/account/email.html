@@ -5,6 +5,7 @@
 {% block head_title %}{% trans "Account" %}{% endblock %}
 
 {% block inner_content %}
+<div class="custom-margin2">
     <hr>
     <h2 class="logo-font mb-4">{% trans "E-mail Addresses" %}</h2>
     <hr>
@@ -54,7 +55,7 @@
         {{ form|crispy }}
         <button name="action_add" type="submit">{% trans "Add E-mail" %}</button>
     </form>
-
+</div>
 {% endblock %}
 
 

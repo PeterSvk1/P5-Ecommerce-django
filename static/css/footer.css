@@ -7,7 +7,8 @@ footer {
     position: relative; /* Ensure z-index works */
     border-top-left-radius: 125px;
     border-top-right-radius: 125px;
-    margin-top: 30px;
+    margin-top: 100px;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6); /* Adjust values for shadow intensity */
 }
 
 .row1 {
