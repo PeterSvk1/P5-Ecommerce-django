@@ -1,19 +1,34 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 
-<footer class="bg-dark-gray text-light-gray py-4"></footer>
-    <div class="container text-center">
-        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
-        <ul class="list-inline">
-            <li class="list-inline-item">
-                <a href="#" class="text-light-gray">Privacy Policy</a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#" class="text-light-gray">Terms of Service</a>
-            </li>
-            <li class="list-inline-item">
-                <a href="#" class="text-light-gray">Contact Us</a>
-            </li>
-        </ul>
+<footer>
+    <div class="row1">
+        <div class="col">
+            <a href="{% url 'home' %}">
+                <img src="{{ MEDIA_URL }}galaxy.png" alt="Logo" class="logo1">
+            </a>
+            <p>Plase subscribe to our newsletter.</p>
+        </div>
+        <div class="col">
+            <h3>Where to find us</h3>
+            <p>Ireland</p>
+            <p>right street, 2555</p>
+            <p class="email-id">Email: test@test.test</p>
+            <h5>Phone: 123456789</h5>
+        </div>
+        <div class="col">
+            <h3>Links</h3>
+            <ul>
+                <li><a href=""></a>Contact US</li>
+                <li><a href=""></a>Facebook</li>
+                <li><a href=""></a>Twitter</li>
+                <li><a href=""></a>Youtube</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Newsletter:
+            </h3>
+        </div>
+        <div class="col"></div>
     </div>
 </footer>

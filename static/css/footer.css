@@ -1,21 +1,55 @@
 footer {
-    background-color: #1a1a1a;
+    width: 100%;
+    background-color: rgb(24, 24, 24);
     color: #9a9a9a;
-    padding: 20px 0;
+    padding-top:20px;
     z-index: 10; /* Ensure it is higher than other overlapping elements */
+    bottom: 0;
     position: relative; /* Ensure z-index works */
+    border-top-left-radius: 125px;
+
+
 }
 
-footer a {
-    color: #9a9a9a;
-    text-decoration: none;
+.row1 {
+    width:85%;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
 }
 
-footer a:hover {
-    color: #5c5c5c;
-    text-decoration: underline;
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+
 }
 
-footer .list-inline-item {
-    margin-right: 10px;
+.logo1{
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.emai-id{
+    width: fit-content;
+    border-bottom: 2px solid white;
+    margin: 20px 0;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+ul li a{
+text-decoration: none;
+color: white;
 }
