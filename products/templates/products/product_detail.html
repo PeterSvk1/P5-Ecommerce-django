@@ -80,7 +80,7 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                    </form>
+                    </form>             
                     <h3>Leave a Review</h3>
                     <form action="{% url 'product_detail' product.id %}" method="POST">
                         {% csrf_token %}
@@ -92,7 +92,7 @@
                     <ul>
                         {% for review in reviews %}
                             <li>
-                                <strong>{{ review.user.username }}:</strong>
+                                <strong>{{ review.user.username }} (Rating: {{ review.rating }}):</strong>
                                 <p>{{ review.comment }}</p>
                                 <p><em>Posted on {{ review.created_at }}</em></p>
                             </li>
