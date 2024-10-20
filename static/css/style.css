@@ -237,7 +237,7 @@ body {
 }
 
 .btt-button:hover {
-    background-color: yellow;
+    background-color: rgb(180, 3, 0);
 }
 
 .btn-link {
@@ -397,6 +397,14 @@ button[id^="increment-"]:hover {
     border-color: #dc3545;
     border-radius: 0;
 }
+
+.icon-white {
+    color: white; /* Set the color to white */
+}
+
+.navbar-toggler {
+    background-color: white; /* Change this to your desired color */
+}
 /* -------------------------------- Media Queries */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -423,10 +431,10 @@ button[id^="increment-"]:hover {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 136px;
+        padding-top: 168px;
     }
 
     body {
-        height: calc(100vh - 136px);
+        height: calc(100vh - 168px);
     }
 }
