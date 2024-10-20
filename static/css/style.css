@@ -19,6 +19,15 @@ body {
     width: 1.5rem;
 }
 
+.logo {
+    max-width: 300px; /* Adjust the size of your logo */
+    max-height: 300px; /* Automatically adjust height */
+    display: block;
+     margin: 0 left; /*Center the logo horizontally */
+}
+
+/* Optional: Add some padding to the top */
+
 .logo-font {
     text-transform: uppercase;
 }
@@ -74,7 +83,7 @@ body {
 }
 
 .bg-black {
-    background: #000 !important;
+    background: rgb(24, 24, 24) !important;
 }
 .overlay {
 	height: 100%;
