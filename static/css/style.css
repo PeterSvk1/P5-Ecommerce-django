@@ -19,7 +19,7 @@ body {
 }
 
 .custom-margin2{
-    padding-top: 60px; /* Adjust this value according to your navbar height */
+    padding-top: 20px; /* Adjust this value according to your navbar height */
     min-height: 100vh;
 }
 
@@ -59,6 +59,46 @@ body {
 .logo-font {
     text-transform: uppercase;
 }
+
+.cart {
+    position: relative; /* Position relative for absolute elements inside */
+    padding: 10px; /* Add padding for better spacing */
+    color: white; /* Default text color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Change color on hover */
+.cart:hover {
+    color: #d30101; /* Change color to gold on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Cart Icon */
+.cart i {
+    font-size: 24px; /* Adjust icon size */
+    transition: transform 0.3s ease; /* Smooth transition for icon scale */
+}
+
+/* Text under the icon */
+.cart p {
+    margin: 0; /* Remove default margin */
+    font-size: 0.85rem; /* Adjust font size */
+    font-weight: 500; /* Make text a bit bolder */
+}
+
+/* Optional: Add a small bubble to indicate item count */
+.cart::after {
+    content: attr(data-count); /* Use a data attribute for item count */
+    position: absolute; /* Position it relative to the cart */
+    top: -5px; /* Position above the icon */
+    right: -10px; /* Position to the right */
+    color: white; /* White text color */
+    border-radius: 50%; /* Make it circular */
+    padding: 2px 6px; /* Add some padding */
+    font-size: 0.7rem; /* Smaller font size */
+    display: none; /* Initially hidden */
+}
+
 
 .main-logo-link {
     width: fit-content;
