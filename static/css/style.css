@@ -99,6 +99,42 @@ body {
     display: none; /* Initially hidden */
 }
 
+.search-bar {
+    border: 5px solid #ccc; /* Add a light border around the search bar */
+    border-radius: 5px; /* Slightly rounded corners */
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6);
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Input Field Styles */
+.search-bar input[type="text"] {
+    background: rgb(rgb(201, 214, 212));
+    border: none; 
+    border-radius: 5px 0 0 5px; 
+    padding: 10px; 
+    font-size: 1rem; 
+}
+
+/* Change border color on focus */
+.search-bar input[type="text"]:focus {
+    outline: none;
+    border-color: #010000;
+}
+
+/* Button Styles */
+.search-bar .btn {
+    border-radius: 0 5px 5px 0; 
+    background-color: #00070f; 
+    color: rgb(203, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+/* Change button color on hover */
+.search-bar .btn:hover {
+    background-color: #970000; 
+    border-color: #6c0f07; 
+}
+
 
 .main-logo-link {
     width: fit-content;
@@ -155,6 +191,7 @@ body {
     background: rgb(24, 24, 24) !important;
 }
 .overlay {
+    
 	height: 100%;
 	width: 100%;
 	top: 0;
