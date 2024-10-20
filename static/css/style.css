@@ -322,6 +322,10 @@ button[id^="increment-"]:hover {
     opacity: 1;
 }
 
+.dropdown-menu a:hover{
+    color: red;
+}
+
 
 
 /* Convenience classes - colors copied from Bootstrap */
