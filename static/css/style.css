@@ -216,7 +216,7 @@ body {
     border-radius: 4px; /* Slightly rounded corners */
     padding: 10px 15px; /* Padding for the badge */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6);
+    box-shadow: 0 0 10px 5px rgba(83, 4, 219, 0.6);
     margin-top: 10px;
 }
 
