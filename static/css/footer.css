@@ -30,7 +30,9 @@ footer {
 }
 
 .logo1 {
-    width: 400px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     margin-bottom: 10px;
 }
 

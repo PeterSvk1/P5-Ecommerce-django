@@ -42,9 +42,6 @@
             <a href="{% url 'home' %}">
                 <img src="{{ MEDIA_URL }}galaxy.png" alt="Logo" class="logo">
             </a>
-            <!-- <a href="{% url 'home' %}" class="nav-link main-logo-link"> -->
-                <!-- <h2 class="logo-font text-black my-0"><strong>Star Wars</strong> SHOP</h2> -->
-            <!-- </a> -->
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 bg-white">
             <form method="GET" action="{% url 'products' %}">
@@ -113,6 +110,7 @@
             <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
         </div>            
     </div>
+
     </header>
 
     {% if messages %}
