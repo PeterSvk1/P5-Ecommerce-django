@@ -14,7 +14,7 @@ body {
 }
 
 .custom-margin1{
-    padding-top: 160px; /* Adjust this value according to your navbar height */
+    padding-top: 180px; /* Adjust this value according to your navbar height */
     min-height: 100vh;
 }
 
@@ -24,10 +24,25 @@ body {
 }
 
 .custom-margin3{
-    padding-top: 400px; /* Adjust this value according to your navbar height */
+    padding-top: 230px; /* Adjust this value according to your navbar height */
     min-height: 100vh;
 }
 
+.contact {
+    font-size: 18px; /* Increases font size */
+    color: #333333; /* Dark gray text for better readability */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    padding: 20px; /* Adds padding around the text */
+    border-radius: 8px; /* Rounded corners for a smooth look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 80%; /* Limit width to make it easier to read */
+    margin: 0 auto; /* Center the block element */
+}
+
+/* Optionally, if you want to keep text centered */
+.contact {
+    text-align: center; /* Keeps the text centered if needed */
+}
 
 /* from Bulma */
 .icon {

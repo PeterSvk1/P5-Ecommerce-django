@@ -11,13 +11,14 @@
 <div class="overlay"></div>
 <div class="container custom-margin3">  <!-- Add custom-margin class -->
     <h1 class="text-center mb-4 product-title">Contact Us</h1>
-    <p class="text-center mb-4">Hello! We’re glad you’re here. Please feel free to send us a message with any questions or feedback. And don’t forget to check out our amazing products!</p>
+    <p class="text-center mb-4 contact">Hello! We’re glad you’re here. Please feel free to send us a message with any questions or feedback. And don’t forget to check out our amazing products!</p>
 
-    <div class="card shadow-lg">
-        <div class="card-header bg-primary text-white text-center">
-            <h4>Send Us a Message</h4>
-        </div>
+    <div class="">
+
         <div class="card-body card1">
+                <div class="card-header text-white text-center">
+            <h4>Send Us a Message</h4>
+                </div>
             <form method="POST">
                 {% csrf_token %}
                 <div class="form-group">
@@ -32,7 +33,9 @@
                     <label for="message">Your Message:</label>
                     {{ form.message }}  <!-- Rendered with the custom widget -->
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                <div class="wrap">
+                <button type="submit" class="button">Send Message</button>
+                </div>
             </form>
         </div>
     </div>
