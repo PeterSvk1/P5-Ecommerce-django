@@ -1,0 +1,37 @@
+<h3 class="text-white text-center">Order History</h3>
+                <hr class="hr2">
+                <div class="order-history table-responsive">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th class="text-white">Order Number</th>
+                                <th class="text-white">Date</th>
+                                <th class="text-white">Items</th>
+                                <th class="text-white">Order Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for order in orders %}
+                                <tr>
+                                    <td>
+                                        <a href="{% url 'order_history' order.order_number %}"
+                                        title="{{ order.order_number }}" class="text-white">
+                                            {{ order.order_number|truncatechars:6 }}
+                                        </a>
+                                    </td>
+                                    <td class="text-white">{{ order.date }}</td>
+                                    <td>
+                                        <ul class="list-unstyled ">
+                                            {% for item in order.lineitems.all %}
+                                                <li class="small text-white">
+                                                    {{ item.product.name }} x{{ item.quantity }}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td class="small text-white">${{ order.grand_total }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>

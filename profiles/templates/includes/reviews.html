@@ -1,0 +1,30 @@
+<h3 class="text-white text-center">Reviewed Products</h3>
+<hr class="hr2">
+<div class="reviewed-products table-responsive">
+    <table class="table table-sm table-borderless">
+        <thead>
+            <tr>
+                <th class="text-white">Product Name</th>
+                <th class="text-white">Review</th>
+                <th class="text-white">Posted On</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for review in reviews %}
+                <tr>
+                    <td class="text-white">
+                        <a href="{% url 'product_detail' review.product.id %}" class="text-white">
+                            {{ review.product.name }}
+                        </a>
+                    </td>
+                    <td class="text-white">{{ review.comment }}</td>
+                    <td class="text-white">{{ review.created_at|date:"M d, Y" }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3" class="text-white">No reviews yet.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
