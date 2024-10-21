@@ -1,14 +1,14 @@
 footer {
     width: 100%;
     background-color: rgb(24, 24, 24);
-    color: #ffffff; /* Set default text color to white */
+    color: #ffffff; 
     padding-top: 20px;
-    z-index: 10; /* Ensure it is higher than other overlapping elements */
-    position: relative; /* Ensure z-index works */
+    z-index: 10; 
+    position: relative;
     border-top-left-radius: 125px;
     border-top-right-radius: 125px;
     margin-top: 100px;
-    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6); /* Adjust values for shadow intensity */
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6);
 }
 
 .row1 {
@@ -31,7 +31,7 @@ footer {
 
 .logo1 {
     width: 100%;
-    max-width: 600px;
+    max-width: 300px;
     height: auto;
     margin-top: 10px;
 }
