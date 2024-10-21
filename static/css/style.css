@@ -678,6 +678,26 @@ label {
 .table img {
     vertical-align: middle; /* Align image vertically */
 }
+
+.margin0{
+    margin-top: 3px;
+}
+
+.dotted {
+    border: none; /* Remove the default border */
+    border-top: 1px dotted white; /* Create a white dotted line */
+    margin: 20px 0; /* Optional: add some spacing */
+}
+
+.card-img-top {
+    border-radius: 20px; /* Adjust the value for more or less rounding */
+
+}
+
+.product-name {
+    text-align: center;
+    flex: 1; /* Allows it to grow and fill available space */
+}
 /* -------------------------------- Media Queries */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
