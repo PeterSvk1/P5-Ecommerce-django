@@ -231,27 +231,106 @@ body {
       height: 300px;
       opacity: 0;
     }
-  }
-
-.btn-black {
-    background: black;
-    color: white;
 }
 
-.btn-outline-black {
-    background: white;
-    color: black !important;
-    border: 1px solid black;
+.btn1 {
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 1rem; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and transform */
+    color: #fff; /* White text */
+    border: none; /* No border by default */
+    margin: 5px;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
+.btn2 {
+    background-color: transparent; /* Transparent background */
+    color: #fff; /* White text */
+    border: 2px solid #fff; /* White border */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 1rem; /* Font size */
+    text-transform: uppercase; /* Uppercase text */
+    border-radius: 0.5rem; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Smooth transition */
+    cursor: pointer; /* Pointer cursor */
+    margin-right: 5px;
+}
+
+.btn2:hover {
+    background-color: rgb(165, 0, 0); /* Light background effect on hover */
+    color: #000000; /* Change text color to black on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    text-decoration: none;
+}
+
+.btn2:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Custom focus effect */
+}
+
+/* Specific styles for Add Product button */
+.btn1[type="submit"] { /* Target Add Product button by type */
+    background-color: #000000; /* Green background */
+}
+
+.btn1[type="submit"]:hover { /* Hover effect for Add Product button */
+    background-color: #c60000; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Optionally add focus styles for both buttons */
+.btn1:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Custom focus effect */
+}
+
+.form-control {
+    border-radius: 30px; 
+    border: 1px solid #ccc;
+    padding: 10px 15px; 
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: white; 
+}
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden; 
+    display: inline-block; 
+    background-color: rgba(255, 0, 0, 0.2);
+    color: white; 
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem
+}
+
+/* Hide the actual file input but keep it accessible */
+input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Make input invisible */
+    cursor: pointer; /* Keep pointer cursor */
+    
+}
+
+/* Optionally, you can style hover and active states */
+.btn-file:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Change color on hover */
+    color: white; 
+}
+
+.btn-file:active {
+    background-color: rgba(255, 255, 0, 0.6); /* Change color on active */
+}
+
+/* Focus styles for accessibility */
+.btn-file:focus {
+    outline: 2px solid rgba(255, 255, 0, 0.8); /* Change outline color on focus */
 }
 
 .text-black {
