@@ -5,6 +5,7 @@
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -27,7 +28,7 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <div class="col-12 col-lg-6 order-lg-last mb-5 card1">
                 <p class="text-muted">Order Summary ({{ product_count }})</p>
                 <div class="row">
                     <div class="col-7 offset-2">
@@ -72,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 card1">
                 <p class="text-muted">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
