@@ -32,7 +32,9 @@
                 <form action="{% url 'product_detail' product.id %}" method="POST">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                    <div class="wrap">
+                    <button type="submit" class="button">Submit Review</button>
+                    </div>
                 </form>
             </div>
 
