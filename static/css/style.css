@@ -232,16 +232,22 @@ body {
       opacity: 0;
     }
 }
+.btn-black{
+    background: #000;
+    color: white;
+
+}
 
 .btn1 {
-    border-radius: 0.5rem; /* Rounded corners */
-    padding: 10px 20px; /* Padding for button */
-    font-size: 1rem; /* Font size */
-    text-transform: uppercase; /* Uppercase text */
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background color and transform */
-    color: #fff; /* White text */
-    border: none; /* No border by default */
+    border-radius: 0.5rem;
+    padding: 10px 20px;
+    font-size: 1rem; 
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+    color: #fff;
+    border: none;
     margin: 5px;
+    background: #000000;
 }
 
 .btn2 {
@@ -254,7 +260,7 @@ body {
     border-radius: 0.5rem; /* Rounded corners */
     transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Smooth transition */
     cursor: pointer; /* Pointer cursor */
-    margin-right: 5px;
+    margin: 5px;
 }
 
 .btn2:hover {
@@ -269,20 +275,20 @@ body {
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Custom focus effect */
 }
 
-/* Specific styles for Add Product button */
-.btn1[type="submit"] { /* Target Add Product button by type */
-    background-color: #000000; /* Green background */
-}
 
-.btn1[type="submit"]:hover { /* Hover effect for Add Product button */
-    background-color: #c60000; /* Darker green on hover */
+
+.btn1:hover { /* Hover effect for Add Product button */
+    background-color: #640000; /* Darker green on hover */
     transform: scale(1.05); /* Slightly enlarge the button on hover */
+    text-decoration: none;
+    color: #f7ff0f;
 }
 
 /* Optionally add focus styles for both buttons */
 .btn1:focus {
     outline: none; /* Remove default focus outline */
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Custom focus effect */
+    text-decoration: none;
 }
 
 .form-control {
