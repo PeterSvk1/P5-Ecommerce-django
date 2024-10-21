@@ -54,6 +54,7 @@ body {
 }
 
 .product-title {
+
     background-color: rgb(30, 30, 30); /* Dark background for the product section */
     border-radius: 8px; /* Round the corners */
     box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6);
@@ -653,6 +654,29 @@ label {
 
 .navbar-toggler {
     background-color: white; /* Change this to your desired color */
+}
+
+.table {
+    width: 100%; /* Full width for table */
+    margin-top: 10px; /* Space above the table */
+}
+
+.table td {
+    padding: 8px; /* Padding for table cells */
+    color: white; /* Set table text color to white */
+}
+
+.card-title a {
+    color: white; /* Set product name link color to white */
+}
+
+.card-title a:hover {
+    color: #ffc107; /* Optional: Change link color on hover */
+    text-decoration: none;
+}
+
+.table img {
+    vertical-align: middle; /* Align image vertically */
 }
 /* -------------------------------- Media Queries */
 /* Slightly larger container on xl screens */

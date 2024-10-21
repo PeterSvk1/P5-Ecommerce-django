@@ -10,27 +10,46 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container mt-4 custom-margin1 ">
-    <h1 class="mb-4 product-title">User Reviews</h1>
-    <div class="list-group">
+    <div class="text-center mb-4">
+        <h1 class="product-title text-white">User reviews</h1> <!-- Center the text -->
+    </div>
+    <div class="row">
         {% for review in reviews %}
-            <div class="list-group-item card1">
-                <div class="d-flex align-items-start">
-                    {% if review.product.image %}  {# Assuming you have an 'image' field in your Product model #}
-                        <img src="{{ review.product.image.url }}" alt="{{ review.product.name }}" class="img-thumbnail me-3" style="width: 100px; height: auto;">
-                    {% endif %}
-                    <div>
-                        <h5 class="mb-1">
+            <div class="col-md-4 mb-3"> <!-- Adjusted to 4 columns for card layout -->
+                <div class="card card1 h-100"> <!-- Card structure for each review -->
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            {% if review.product.image %}
+                                <img src="{{ review.product.image.url }}" alt="{{ review.product.name }}" class="img-thumbnail" style="width: 50px; height: auto; margin-right: 10px;">
+                            {% endif %}
                             <a href="{% url 'product_detail' review.product.id %}">{{ review.product.name }}</a>
                         </h5>
-                        <p class="mb-1">Rating: {{ review.rating }}</p>
-                        <p class="mb-1">{{ review.comment }}</p>
-                        <small class="text-muted">Reviewed by {{ review.user.username }} on {{ review.created_at }}</small>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Rating:</strong></td>
+                                    <td>{{ review.rating }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Comment:</strong></td>
+                                    <td>{{ review.comment }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Reviewed By:</strong></td>
+                                    <td>{{ review.user.username }}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Date:</strong></td>
+                                    <td>{{ review.created_at }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         {% empty %}
-            <div class="list-group-item">
-                <p>No reviews available.</p>
+            <div class="col-12">
+                <div class="alert alert-info text-center">No reviews available.</div>
             </div>
         {% endfor %}
     </div>
