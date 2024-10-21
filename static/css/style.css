@@ -23,6 +23,11 @@ body {
     min-height: 100vh;
 }
 
+.custom-margin3{
+    padding-top: 400px; /* Adjust this value according to your navbar height */
+    min-height: 100vh;
+}
+
 
 /* from Bulma */
 .icon {
