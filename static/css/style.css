@@ -312,14 +312,14 @@ body {
     text-decoration: none;
 }
 
-.form-control {
+/* .form-control {
     border-radius: 30px; 
     border: 1px solid #ccc;
     padding: 10px 15px; 
     transition: background-color 0.3s ease, border-color 0.3s ease; 
     background-color: rgba(255, 255, 255, 0.8); 
     color: white; 
-}
+} */
 
 
 .btn-file {
@@ -519,9 +519,9 @@ button[id^="increment-"]:hover {
 }
 
 .form-control {
-    border-radius: 30px; /* Rounded corners for input fields */
+    border-radius: 15px; /* Rounded corners for input fields */
     border: 1px solid #ccc; /* Light gray border */
-    padding: 10px 15px; /* Padding for input fields */
+    padding: 0px 10px; /* Padding for input fields */
     transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
     background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
     color: black;
