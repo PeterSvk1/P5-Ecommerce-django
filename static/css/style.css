@@ -266,9 +266,9 @@ body {
     text-transform: uppercase;
     transition: background-color 0.3s, transform 0.2s;
     color: #fff;
-    border: none;
     margin: 5px;
-    background: #000000;
+    border: 2px solid #fff; /* White border */
+    background: #151313;
 }
 
 .btn2 {
