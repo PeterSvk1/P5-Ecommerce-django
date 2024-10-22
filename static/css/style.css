@@ -524,10 +524,6 @@ button[id^="increment-"]:hover {
     box-shadow: 0 0 5px rgba(11, 7, 7, 0.5); /* Subtle shadow on focus */
 }
 
-/* Optional styling for Image Field */
-.custom-file-input {
-    border-radius: 30px; /* Ensure custom file input is rounded */
-}
 
 label {
     color: white; /* Change the text color of labels to white */
