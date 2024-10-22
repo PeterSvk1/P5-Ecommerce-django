@@ -31,6 +31,3 @@ def subscribe(request):
             messages.error(request, 'Please enter a valid email address.')
 
     return redirect('home')
-
-def custom_404_view(request, exception):
-    return render(request, '404.html', status=404)

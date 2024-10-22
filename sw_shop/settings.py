@@ -32,7 +32,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
                 '8000-petersvk1-p5ecommercedj-e10t39srj5d.ws.codeinstitute-ide.net',
-                'swshop-c6f30bb69fd8.herokuapp.com'
+                'swshop-c6f30bb69fd8.herokuapp.com',
+                'localhost',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -64,6 +65,7 @@ INSTALLED_APPS = [
     'wishlistapp',
     'reviews',
     'newsletter',
+    'errors'
 ]
 
 MIDDLEWARE = [

@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from newsletter.views import custom_404_view
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,5 +30,9 @@ urlpatterns = [
     path('wishlistapp/', include('wishlistapp.urls')),
     path('reviews/', include('reviews.urls')),
     path('newsletter/', include('newsletter.urls')),
+    path('errors/', include('newsletter.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-handler404 = custom_404_view
+
+handler404 = 'errors.views.handler404'
+handler500 = 'errors.views.handler500'
+handler403 = 'errors.views.handler403'
