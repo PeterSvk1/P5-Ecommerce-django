@@ -1,0 +1,31 @@
+Hello {{ order.full_name }},
+
+Thank you for your order at SWshop!
+
+Here are the details of your purchase:
+
+Order Information:
+------------------------------
+Order Number : {{ order.order_number }}
+Order Date   : {{ order.date }}
+Order Total  : ${{ order.order_total }}
+Delivery     : ${{ order.delivery_cost }}
+Grand Total  : ${{ order.grand_total }}
+------------------------------
+
+Shipping Address:
+------------------------------
+{{ order.street_address1 }}
+{{ order.town_or_city }}, {{ order.country }}
+------------------------------
+
+We have your phone number on file as {{ order.phone_number }}.
+
+If you have any questions or need further assistance, feel free to reach out to us at {{ contact_email }}.
+
+Thank you once again for shopping with us!
+
+Sincerely,
+
+The SWshop Team
+SwShop.com
