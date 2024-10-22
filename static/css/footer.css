@@ -103,12 +103,6 @@ form button .fa-solid {
     border-bottom: 2px solid #ccc;
 }
 
-.copy {
-    text-align: center;
-    padding-bottom: 10px;
-    color: #ffffff; /* Set copyright text color to white */
-}
-
 .underline {
     width: 100%;
     height: 5px;
@@ -129,6 +123,44 @@ form button .fa-solid {
     top: 0;
     left: 10px;
     animation: moving 2s linear infinite;
+}
+
+.footer-links {
+    display: flex;                  /* Use flexbox to align items in a row */
+    flex-direction: row;            /* Default direction */
+    justify-content: center;        /* Center items horizontally */
+    align-items: center;            /* Align items vertically */
+    flex-wrap: wrap;
+}
+
+.footer-links p {
+    margin: 0 10px;                /* Add space between elements */
+}
+
+.footer-links a {
+    text-decoration: none;          /* Remove underline from links */
+    color: inherit;                 /* Use the inherited color (typically black) */
+    transition: color 0.3s;        /* Smooth transition for color change */
+}
+
+.footer-links a:hover {
+    color: green;                  /* Change link color to green on hover */
+}
+
+.footer-text {
+    margin-left: auto;               /* Push footer-text to the right */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column;    /* Stack elements vertically on small screens */
+        align-items: center;    /* Align items to the left */
+    }
+
+    .footer-links p {
+        margin: 5px 0;             /* Adjust margin for better spacing */
+    }
 }
 
 @keyframes moving {
