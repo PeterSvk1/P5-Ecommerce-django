@@ -534,6 +534,44 @@ label {
     font-weight: bold; /* Optional: make labels bold for better visibility */
 }
 
+.card2 {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(84, 133, 224, 0.1);
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    margin: 20px auto; /* Center the card with margin */
+    max-width: 400px; /* Maximum width of the card */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border for definition */
+}
+
+.card2 h2 {
+    text-align: center; /* Center the heading */
+}
+
+.card2 form {
+    margin-top: 10px; /* Space above the form */
+}
+
+.card2 .btn1, .card2 .btn2 {
+    width: 100%; /* Full width buttons */
+    margin-top: 10px; /* Space between buttons */
+    padding: 10px; /* Padding inside buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+.card2 input.form-control {
+    border-radius: 5px; /* Adjust the value for more or less roundness */
+    border: 1px solid #ccc; /* Optional: Define border color */
+    padding: 10px; /* Optional: Add padding for better spacing */
+    transition: border-color 0.3s; /* Optional: Smooth transition for border color */
+}
+
+.card2 input.form-control:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional: Add shadow on focus */
+}
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
     border-bottom-color: #007bff !important;
@@ -610,7 +648,7 @@ label {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0;
+    border-radius: 15px;
 
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -620,7 +658,7 @@ label {
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
     background-color: #222;
-    border-color: #222;
+    border-color: #6a0101;
 }
 
 .allauth-form-inner-content a {
