@@ -21,14 +21,16 @@ class ContactForm(forms.Form):
         required=True,
         widget=forms.TextInput(attrs={
             'class': 'form-control',
-            'placeholder': 'Enter your name'
+            'placeholder': 'Enter your name',
+            'id': 'name' 
         })
     )
     email = forms.EmailField(
         required=True,
         widget=forms.EmailInput(attrs={
             'class': 'form-control',
-            'placeholder': 'Enter your email'
+            'placeholder': 'Enter your email',
+            'id': 'email'
         })
     )
     message = forms.CharField(
@@ -36,6 +38,7 @@ class ContactForm(forms.Form):
         widget=forms.Textarea(attrs={
             'class': 'form-control',
             'placeholder': 'Type your message here',
-            'rows': 5
+            'rows': 5,
+            'id': 'message'
         })
     )
