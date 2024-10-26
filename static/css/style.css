@@ -10,38 +10,37 @@ body {
     color: #555;
     font-family: 'Lato';
     min-height: 100vh;
-    padding-top: 70px; /* Adjust this value according to your navbar height */
+    padding-top: 70px;
 }
 
 .custom-margin1{
-    padding-top: 180px; /* Adjust this value according to your navbar height */
+    padding-top: 180px;
     min-height: 100vh;
 }
 
 .custom-margin2{
-    padding-top: 20px; /* Adjust this value according to your navbar height */
+    padding-top: 20px;
     min-height: 100vh;
 }
 
 .custom-margin3{
-    padding-top: 230px; /* Adjust this value according to your navbar height */
+    padding-top: 230px;
     min-height: 100vh;
 }
 
 .contact {
-    font-size: 18px; /* Increases font size */
-    color: #333333; /* Dark gray text for better readability */
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-    padding: 20px; /* Adds padding around the text */
-    border-radius: 8px; /* Rounded corners for a smooth look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    max-width: 80%; /* Limit width to make it easier to read */
-    margin: 0 auto; /* Center the block element */
+    font-size: 18px;
+    color: #333333;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 80%; 
+    margin: 0 auto;
 }
 
-/* Optionally, if you want to keep text centered */
 .contact {
-    text-align: center; /* Keeps the text centered if needed */
+    text-align: center;
 }
 
 /* from Bulma */
@@ -55,57 +54,56 @@ body {
 
 .product-title {
 
-    background-color: rgb(30, 30, 30); /* Dark background for the product section */
-    border-radius: 8px; /* Round the corners */
+    background-color: rgb(30, 30, 30);
+    border-radius: 8px; 
     box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6);
-    padding: 10px; /* Add padding to create space around the text */
+    padding: 10px; 
     color: white;
     display: inline-block;
 }
 
 #delivery-banner {
-    background-color: rgb(24, 24, 24); /* Background color */
+    background-color: rgb(24, 24, 24);
     color: #ffffff; 
     box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6);
 }
 
 .logo {
-    max-width: 300px; /* Adjust the size of your logo */
-    max-height: 300px; /* Automatically adjust height */
+    max-width: 300px; 
+    max-height: 300px; 
     display: block;
-     margin: 0 left; /*Center the logo horizontally */
+     margin: 0 left; 
 }
 
-/* Optional: Add some padding to the top */
 
 .logo-font {
     text-transform: uppercase;
 }
 
 .cart {
-    position: relative; /* Position relative for absolute elements inside */
-    padding: 10px; /* Add padding for better spacing */
-    color: white; /* Default text color */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    position: relative; 
+    padding: 10px; 
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease; 
 }
 
 /* Change color on hover */
 .cart:hover {
-    color: #d30101; /* Change color to gold on hover */
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    color: #d30101;
+    transform: scale(1.1);
 }
 
 /* Cart Icon */
 .cart i {
     font-size: 24px; /* Adjust icon size */
-    transition: transform 0.3s ease; /* Smooth transition for icon scale */
+    transition: transform 0.3s ease;
 }
 
 /* Text under the icon */
 .cart p {
-    margin: 0; /* Remove default margin */
-    font-size: 0.85rem; /* Adjust font size */
-    font-weight: 500; /* Make text a bit bolder */
+    margin: 0; 
+    font-size: 0.85rem; 
+    font-weight: 500; 
 }
 
 /* Optional: Add a small bubble to indicate item count */
@@ -122,10 +120,10 @@ body {
 }
 
 .search-bar {
-    border: 5px solid #ccc; /* Add a light border around the search bar */
-    border-radius: 5px; /* Slightly rounded corners */
+    border: 5px solid #ccc;
+    border-radius: 5px;
     box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6);
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    transition: border-color 0.3s ease; 
 }
 
 /* Input Field Styles */
@@ -267,48 +265,48 @@ body {
     transition: background-color 0.3s, transform 0.2s;
     color: #fff;
     margin: 5px;
-    border: 2px solid #fff; /* White border */
+    border: 2px solid #fff; 
     background: #151313;
 }
 
 .btn2 {
-    background-color: transparent; /* Transparent background */
-    color: #fff; /* White text */
-    border: 2px solid #fff; /* White border */
-    padding: 10px 20px; /* Padding for button */
-    font-size: 1rem; /* Font size */
-    text-transform: uppercase; /* Uppercase text */
-    border-radius: 0.5rem; /* Rounded corners */
-    transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Smooth transition */
-    cursor: pointer; /* Pointer cursor */
+    background-color: transparent; 
+    color: #fff; 
+    border: 2px solid #fff; 
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase; 
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    cursor: pointer;
     margin: 5px;
 }
 
 .btn2:hover {
-    background-color: rgb(165, 0, 0); /* Light background effect on hover */
-    color: #000000; /* Change text color to black on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    background-color: rgb(165, 0, 0); 
+    color: #000000; 
+    transform: scale(1.05);
     text-decoration: none;
 }
 
 .btn2:focus {
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Custom focus effect */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
 }
 
 
 
-.btn1:hover { /* Hover effect for Add Product button */
-    background-color: #640000; /* Darker green on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+.btn1:hover {
+    background-color: #640000; 
+    transform: scale(1.05);
     text-decoration: none;
     color: #f7ff0f;
 }
 
-/* Optionally add focus styles for both buttons */
+
 .btn1:focus {
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* Custom focus effect */
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
     text-decoration: none;
 }
 
@@ -382,31 +380,26 @@ input[type="file"] {
 
 }
 
-/* a.category-badge > span.badge:hover {
-    background: #000 !important;
-    color: azure !important;
-} */
-
 .category-badge {
-    text-decoration: none; /* Ensure no underline */
+    text-decoration: none; 
 }
 
 .category-badge span {
-    display: inline-block; /* Allow padding and margin to work */
-    background-color: rgb(24, 24, 24); /* Background color */
-    color: white; /* Text color */
-    border-radius: 4px; /* Slightly rounded corners */
-    padding: 10px 15px; /* Padding for the badge */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    display: inline-block; 
+    background-color: rgb(24, 24, 24); 
+    color: white; 
+    border-radius: 4px; 
+    padding: 10px 15px;
+    transition: all 0.3s ease; 
     box-shadow: 0 0 10px 5px rgba(83, 4, 219, 0.6);
     margin-top: 10px;
 }
 
 .category-badge span:hover {
-    background-color: rgb(0, 0, 0); /* Darker background on hover */
+    background-color: rgb(0, 0, 0);
     color: white;
-    transform: translateY(-2px); /* Slight lift effect on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btt-button {
@@ -428,25 +421,25 @@ input[type="file"] {
 
 /* Decrement button (-) styles */
 button[id^="decrement-"] {
-    background-color: #f44336; /* Red color */
+    background-color: #f44336; 
     color: white;
     border-color: #f44336;
 }
 
 button[id^="decrement-"]:hover {
-    background-color: #9d1212; /* Darker red on hover */
+    background-color: #9d1212;
     border-color: #871818;
 }
 
 /* Increment button (+) styles */
 button[id^="increment-"] {
-    background-color: #4CAF50; /* Green color */
+    background-color: #4CAF50;
     color: white;
     border-color: #4CAF50;
 }
 
 button[id^="increment-"]:hover {
-    background-color: #08600b; /* Darker green on hover */
+    background-color: #08600b;
     border-color: #388E3C;
 }
 
@@ -513,21 +506,21 @@ button[id^="increment-"]:hover {
     border: 1px solid #ccc; /* Light gray border */
     padding: 0px 10px; /* Padding for input fields */
     transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    background-color: rgba(255, 255, 255, 0.8); 
     color: black;
 }
 
 /* Focus styling for input fields */
 .form-control:focus {
-    background-color: white; /* Creamy background color on focus */
-    border-color: #070101; /* Change border color on focus */
-    box-shadow: 0 0 5px rgba(11, 7, 7, 0.5); /* Subtle shadow on focus */
+    background-color: white; 
+    border-color: #070101; 
+    box-shadow: 0 0 5px rgba(11, 7, 7, 0.5);/
 }
 
 
 label {
-    color: white; /* Change the text color of labels to white */
-    font-weight: bold; /* Optional: make labels bold for better visibility */
+    color: white; 
+    font-weight: bold;
 }
 
 .card2 {
@@ -803,6 +796,8 @@ label {
     }
 
     body {
+        background: rgb(5, 4, 28);
+        background: repeating-linear-gradient(180deg, rgb(0, 0, 0), rgb(94, 0, 0));
         height: calc(100vh - 168px);
     }
 }
