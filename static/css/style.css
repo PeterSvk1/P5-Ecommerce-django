@@ -429,6 +429,7 @@ input[type="file"] {
     bottom: 20px;
     right: 20px;
     background-color: azure;
+    z-index: 999;
 }
 
 .btt-button:hover {
