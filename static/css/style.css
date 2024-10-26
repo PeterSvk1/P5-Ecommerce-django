@@ -524,7 +524,7 @@ button[id^="increment-"]:hover {
 .form-control {
     border-radius: 15px; /* Rounded corners for input fields */
     border: 1px solid #ccc; /* Light gray border */
-    padding: 0px 10px; /* Padding for input fields */
+    padding: 0px 5px; /* Padding for input fields */
     transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
     background-color: rgba(255, 255, 255, 0.8); 
     color: black;
