@@ -771,7 +771,7 @@ label {
     flex: 1; 
 }
 /* -------------------------------- Media Queries */
-#hint_id_password1,{
+#hint_id_password1{
     display: none;
 }
 
