@@ -251,11 +251,11 @@ body {
       opacity: 0;
     }
 }
-.btn-black{
+/* .btn-black{
     background: #000;
     color: white;
 
-}
+} */
 
 .btn1 {
     border-radius: 0.5rem;
@@ -308,6 +308,27 @@ body {
     outline: none; 
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
     text-decoration: none;
+}
+
+.btn3 {
+    background-color: transparent; 
+    color: #fff; 
+    border: 2px solid #fff; 
+    padding: 5px 10px;
+    font-size: 10px;
+    text-transform: uppercase; 
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn3:hover {
+    background: linear-gradient(90deg, rgb(100, 0, 0), rgb(248, 219, 0)); 
+    color: #ffffff; 
+    transform: scale(.95);
+    text-decoration: none;
+    border: 2px solid #000000;
 }
 
 .btn-file {
