@@ -251,11 +251,10 @@ body {
       opacity: 0;
     }
 }
-/* .btn-black{
+.btn-black{
     background: #000;
     color: white;
-
-} */
+}
 
 .btn1 {
     border-radius: 0.5rem;
