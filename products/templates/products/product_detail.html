@@ -101,11 +101,12 @@
                                 <p class="text-white">{{ review.comment }}</p>
                                 <p class="text-white"><em>Posted on {{ review.created_at }}</em></p>
                             </li>
-                            <hr class="dotted">
+                            
                         {% empty %}
                             <li class="text-white">No reviews yet.</li>
                         {% endfor %}
-                    </ul>
+                        </ul>
+                    <hr class="dotted">
                 </div>
             </div>
         </div>
