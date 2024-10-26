@@ -476,17 +476,17 @@ button[id^="increment-"]:hover {
     right: 36px;
 }
 
-#all-products-link {
+.all-products-link {
     position: relative;
-    color: white; /* Default color */
+    color: white !important;
     transition: color 0.5s; /* Smooth transition for color change */
 }
 
-#all-products-link:hover {
-    color: #ff0000; /* Change this to your desired hover color */
+.all-products-link:hover {
+    color: #ff0000 !important; /* Change this to your desired hover color */
 }
 
-#all-products-link span{
+.all-products-link span{
     position: absolute;
     top: 0;
     left: 0;
@@ -499,7 +499,7 @@ button[id^="increment-"]:hover {
     transition: .5s;
 }
 
-#all-products-link:hover span {
+.all-products-link:hover span {
     transform: scale(1) translateY(0px);
     opacity: 1;
 }
