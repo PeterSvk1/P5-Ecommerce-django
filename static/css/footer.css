@@ -127,29 +127,35 @@ form button .fa-solid {
 }
 
 .footer-links {
-    display: flex;                  /* Use flexbox to align items in a row */
-    flex-direction: row;            /* Default direction */
-    justify-content: center;        /* Center items horizontally */
-    align-items: center;            /* Align items vertically */
+    display: flex;                  
+    flex-direction: row;            
+    justify-content: center;     
+    align-items: center;            
     flex-wrap: wrap;
 }
 
 .footer-links p {
-    margin: 0 10px;                /* Add space between elements */
+    margin: 0 10px;              
 }
 
 .footer-links a {
-    text-decoration: none;          /* Remove underline from links */
-    color: inherit;                 /* Use the inherited color (typically black) */
-    transition: color 0.3s;        /* Smooth transition for color change */
+    text-decoration: none;       
+    color: inherit;       
+    transition: color 0.3s;             
 }
 
 .footer-links a:hover {
-    color: green;                  /* Change link color to green on hover */
+    color: rgb(233, 241, 3);                 
+}
+
+.footer-socials a:hover{
+    color: rgb(233, 241, 3);
+    text-decoration: none;
+
 }
 
 .footer-text {
-    margin-left: auto;               /* Push footer-text to the right */
+    margin-left: auto;             
 }
 
 /* Media query for smaller screens */

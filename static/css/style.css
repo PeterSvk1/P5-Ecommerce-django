@@ -285,7 +285,7 @@ body {
 .btn2:hover {
     background-color: rgb(165, 0, 0); 
     color: #000000; 
-    transform: scale(1.05);
+    transform: scale(.95);
     text-decoration: none;
 }
 
@@ -297,8 +297,8 @@ body {
 
 
 .btn1:hover {
-    background-color: #640000; 
-    transform: scale(1.05);
+    background-color: rgb(165, 0, 0); 
+    transform: scale(0.95);
     text-decoration: none;
     color: #f7ff0f;
 }
@@ -797,7 +797,7 @@ label {
 
     body {
         background: rgb(5, 4, 28);
-        background: repeating-linear-gradient(180deg, rgb(0, 0, 0), rgb(94, 0, 0));
+        background: repeating-linear-gradient(180deg, rgb(0, 0, 0), rgb(70, 0, 0)) fixed;
         height: calc(100vh - 168px);
     }
 }
