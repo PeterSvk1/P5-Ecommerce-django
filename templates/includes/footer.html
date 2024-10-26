@@ -7,14 +7,16 @@
             <p>We are happy you decided to shop with us!</p>
         </div>
         <div class="col">
-            <h3>Where to find us <div class="underline"><span></span></div></h3>
+            <h3>Find us: </h3>
+                <div class="underline"><span></span></div>
             <p>Ireland</p>
             <p>Right Street, 2555</p>
             <p class="email-id">Email: test@test.test</p>
             <h5>Phone: 123456789</h5>
         </div>
         <div class="col">
-            <h3>Links <div class="underline"><span></span></div></h3>
+            <h3>Links: </h3>
+                <div class="underline"><span></span></div>
             <ul>
                 <li><a href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact Us</a></li>
                 <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
@@ -23,7 +25,8 @@
             </ul>
         </div>
         <div class="col">
-            <h3>Newsletter: <div class="underline"><span></span></div></h3>
+            <h3>Newsletter: </h3>
+            <div class="underline"><span></span></div>
             <form action="{% url 'subscribe' %}" class="subs" method="post">
                 {% csrf_token %}
                 <i class="far fa-solid fa-envelope big"></i>
