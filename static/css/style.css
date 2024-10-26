@@ -717,7 +717,8 @@ label {
 }
 
 .card-img-top1 {
-    height: auto; /* Adjust as needed */
+    height: auto;
+    width: 100%;
     object-fit: cover;
     border-bottom: 1px solid #ccc;
 }
