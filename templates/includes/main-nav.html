@@ -6,11 +6,11 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav mx-auto">
         <li class="nav-item dropdown active"> <!-- Added active class here -->
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5 all-products-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span></span>
                 All Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
@@ -19,10 +19,10 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span></span>
+            <a class="logo-font font-weight-bold nav-link mr-5 all-products-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Toys
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="toy-link">
+            <div class="dropdown-menu border-0">
                 <a href="{% url 'products' %}?category=legos" class="dropdown-item">Legos</a>
                 <a href="{% url 'products' %}?category=fluffy_toys" class="dropdown-item">Fluffy toys</a>
                 <a href="{% url 'products' %}?category=legos,fluffy_toys" class="dropdown-item">All toys</a>
@@ -30,10 +30,10 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span></span>
+            <a class="logo-font font-weight-bold nav-link mr-5 all-products-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span></span>
                 Lightsabers
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="lightsaber-link">
+            <div class="dropdown-menu border-0">
                 <a href="{% url 'products' %}?category=single_handed" class="dropdown-item">Single handed</a>
                 <a href="{% url 'products' %}?category=double_sided" class="dropdown-item">Double sided</a>
                 <a href="{% url 'products' %}?category=single_handed,double_sided" class="dropdown-item">All Lightsabers</a>
@@ -41,10 +41,10 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span></span>
+            <a class="logo-font font-weight-bold nav-link mr-5 all-products-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span></span>
                 Deals
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+            <div class="dropdown-menu border-0">
                 <a href="{% url 'products' %}?category=hot_items" class="dropdown-item">Hot Items</a>
                 <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
                 <a href="{% url 'products' %}?category=hot_items,deals" class="dropdown-item">All Specials</a>
@@ -52,10 +52,10 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span></span>
+            <a class="logo-font font-weight-bold nav-link mr-5 all-products-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span></span>
                 Infos
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+            <div class="dropdown-menu border-0">
                 <a href="{% url 'reviews_list' %}" class="dropdown-item">View All Reviews</a>
                 <a href="{% url 'contact' %}" class="dropdown-item">Contact us</a>
             </div>
