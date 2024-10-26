@@ -144,7 +144,7 @@ body {
 /* Button Styles */
 .search-bar .btn {
     border-radius: 0 5px 5px 0; 
-    background-color: #00070f; 
+    background-color: #0f0e00; 
     color: rgb(203, 0, 0);
     transition: background-color 0.3s ease;
 }
