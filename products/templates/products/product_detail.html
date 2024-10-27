@@ -31,7 +31,7 @@
                 </div>
                 
                 <hr class="hr2">
-                <p class="lead mb-0 text-left font-weight-bold text-white">${{ product.price }}</p>
+                <p class="lead mb-0 text-left font-weight-bold text-white">€{{ product.price }}</p>
                 {% if product.category %}
                 <p class="small mt-1 mb-0">
                     <a class="text-white" href="{% url 'products' %}?category={{ product.category.name }}">

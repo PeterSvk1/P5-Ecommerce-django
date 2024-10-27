@@ -58,7 +58,7 @@
                             <p class="my-0 small text-white">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-white">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small text-white">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -70,9 +70,9 @@
                         <p class="my-0 text-white">Grand Total:</p>
                     </div>
                     <div class="col-3">
-                        <p class="my-0 text-white">${{ total | floatformat:2 }}</p>
-                        <p class="my-0 text-white">${{ delivery | floatformat:2 }}</p>
-                        <p class="my-0 text-white"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                        <p class="my-0 text-white">€{{ total | floatformat:2 }}</p>
+                        <p class="my-0 text-white">€{{ delivery | floatformat:2 }}</p>
+                        <p class="my-0 text-white"><strong>€{{ grand_total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
                             <span class="icon">
                                 <i class="fas fa-exclamation-circle"></i>
                             </span>
-                            <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                            <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
                         </p>
                     <div class="submit-button text-right mt-5 mb-2">
                         <div class="d-flex flex-column flex-sm-row">
