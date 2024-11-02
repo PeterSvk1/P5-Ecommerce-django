@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /checkout/
+Sitemap: https://swshop-c6f30bb69fd8.herokuapp.com/sitemap.xml
