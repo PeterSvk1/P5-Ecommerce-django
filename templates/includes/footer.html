@@ -8,7 +8,6 @@
         </div>
         <div class="col">
             <h3>Find us: </h3>
-                <div class="underline"><span></span></div>
             <p>Ireland</p>
             <p>Right Street, 2555</p>
             <p class="email-id">Email: test@test.test</p>
@@ -16,17 +15,15 @@
         </div>
         <div class="col footer-socials">
             <h3>Links: </h3>
-                <div class="underline"><span></span></div>
             <ul>
                 <li><a href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact Us</a></li>
                 <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a></li>
-                <li><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://x.com/Swshop1234" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> X</a></li>
                 <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a></li>
             </ul>
         </div>
         <div class="col">
-            <h3>Newsletter: </h3>
-            <div class="underline"><span></span></div>
+            <h3>Newsletter:</h3>
             <form action="{% url 'subscribe' %}" class="subs" method="post">
                 {% csrf_token %}
                 <i class="far fa-solid fa-envelope big"></i>

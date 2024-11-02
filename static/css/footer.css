@@ -93,37 +93,14 @@ form button {
 }
 
 form button .fa-solid {
-    font-size: 16px; /* Fixed typo from 16ppx to 16px */
-    color: #ffffff; /* Set button icon color to white */
+    font-size: 16px; 
+    color: #ffffff;
 }
 
 .hr1 {
     width: 90%;
     border: 0;
     border-bottom: 2px solid #ccc;
-}
-
-.underline {
-    width: 60%;
-    height: 5px;
-    background: #ccc;
-    border-radius: 3px;
-    position: absolute;
-    top: 35px;
-    left: 0;
-    overflow: hidden;
-    margin-top: 8px;
-}
-
-.underline span {
-    width: 15px;
-    height: 100%;
-    background: white;
-    border-radius: 3px;
-    position: absolute;
-    top: 0;
-    left: 10px;
-    animation: moving 2s linear infinite;
 }
 
 .footer-links {
