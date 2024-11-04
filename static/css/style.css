@@ -525,10 +525,12 @@ button[id^="increment-"]:hover {
 .form-control {
     border-radius: 15px; /* Rounded corners for input fields */
     border: 1px solid #ccc; /* Light gray border */
-    padding: 0px 5px; /* Padding for input fields */
+    padding: 0px 3px; /* Padding for input fields */
     transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
     background-color: rgba(255, 255, 255, 0.8); 
     color: black;
+    pointer-events: auto;
+    opacity: 1; 
 }
 
 /* Focus styling for input fields */
@@ -789,6 +791,7 @@ label {
     display: none;
 }
 
+
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
@@ -820,5 +823,15 @@ label {
         background: rgb(5, 4, 28);
         background: repeating-linear-gradient(180deg, rgb(0, 0, 0), rgb(70, 0, 0)) fixed;
         height: calc(100vh - 168px);
+    }
+
+@media (max-width: 380px) {
+        .header-container {
+            padding-top: 264px;
+        }
+
+        .table thead {
+            display: none;
+        }
     }
 }

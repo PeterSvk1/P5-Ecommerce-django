@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container custom-margin3">
+
+    <div class="card1 mt-4">
+    <!-- List of Latest Newsletters -->
+    <div class="mt-4">
+        <h2 class="text-center text-white">Latest Newsletters</h2>
+        <div class="row justify-content-center">
+            {% for newsletter in newsletters %}
+                <div class="col-md-4 mb-3">
+                    <div class="card card2 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">{{ newsletter.title }}</h5>
+                            <p class="text-white">By {{ newsletter.author }} on {{ newsletter.published_date|date:"F j, Y" }}</p>
+                            <hr>
+                            <p class="card-text text-white">
+                                {{ newsletter.content|truncatewords:30 }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="col-12">
+                    <div class="alert alert-info text-center">No newsletters available at the moment.</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

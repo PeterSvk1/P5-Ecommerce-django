@@ -1,4 +1,7 @@
 User-agent: *
 Disallow: /accounts/
 Disallow: /checkout/
+Disallow: /admin/
+Disallow: /bag/
+Disallow: /profile/
 Sitemap: https://swshop-c6f30bb69fd8.herokuapp.com/sitemap.xml

@@ -3,6 +3,7 @@ from django.contrib import messages
 from .forms import NewsletterSubscriptionForm
 from django.core.mail import send_mail
 from django.conf import settings
+from .models import NewsletterPost
 
 def subscribe(request):
     if request.method == 'POST':
@@ -31,3 +32,7 @@ def subscribe(request):
             messages.error(request, 'Please enter a valid email address.')
 
     return redirect('home')
+
+def newsletter_list(request):
+    newsletters = NewsletterPost.objects.all().order_by('-published_date')
+    return render(request, 'newsletter.html', {'newsletters': newsletters})

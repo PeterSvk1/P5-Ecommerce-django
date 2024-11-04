@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container custom-margin3">
+    <div class="text-center mb-4">
+        <h1 class="product-title">Add Newsletter</h1>
+    <div>
+    <!-- Newsletter Form -->
+    <form method="POST" class="p-4">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_title" class="text-white">Title:</label>
+            {{ form.title }}
+        </div>
+        <div class="form-group">
+            <label for="id_content" class="text-white">Content:</label>
+            {{ form.content }}
+        </div>
+        <div class="wrap">
+            <button type="submit" class="btn btn-success btn-block">Post Newsletter</button>
+        </div>
+    </form>
+
+    <!-- List of Latest Newsletters -->
+    <div class="mt-4">
+        <h2 class="text-center text-white">Latest Newsletters</h2>
+        <div class="row">
+            {% for newsletter in newsletters %}
+                <div class="col-md-4 mb-3">
+                    <div class="card card1 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">{{ newsletter.title }}</h5>
+                            <p class="text-white">By {{ newsletter.author }} on {{ newsletter.published_date|date:"F j, Y" }}</p>
+                            <hr>
+                            <p class="card-text text-white">
+                                {{ newsletter.content|truncatewords:30 }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="col-12">
+                    <div class="alert alert-info text-center">No newsletters available at the moment.</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
