@@ -6,7 +6,7 @@ This project is an e-commerce website built to sell star wars products. The webs
 The website is built using Django framework, and follows an agile methodology approach for development.
 
 <p align="center">
-<img src="./assets/readme/responsive.jpg">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/readme/responsive.png">
 </p>
 
 [Live version of my project](https://swshop-c6f30bb69fd8.herokuapp.com/)
