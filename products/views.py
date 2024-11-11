@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from reviews.forms import ReviewForm
 from reviews.models import Review
-
+from django.db.models import Avg
 from .models import Product, Category
 from .forms import ProductForm
 
@@ -29,6 +29,10 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
+            if sortkey == 'rating':
+                products = products.annotate(average_rating=Avg('reviews__rating'))
+                sortkey = 'average_rating'
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
