@@ -74,6 +74,10 @@ def product_detail(request, product_id):
             review.user = request.user
             review.product = product
             review.save()
+
+            product.rating = product.average_review_rating()
+            product.save()
+
             messages.success(request, 'Your review has been submitted!')
             return redirect(reverse('product_detail', args=[product.id]))  # Redirect to the same product detail page
     else:
