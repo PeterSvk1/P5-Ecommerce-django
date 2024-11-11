@@ -39,11 +39,14 @@
                     </a>
                 </p>
                 {% endif %}
-                {% if product.rating %}
-                    <small class="text-white"><i class="fas fa-star mr-1"></i>{{ product.average_review_rating }} / 5</small>
+
+                <!-- Product Rating -->
+                {% if product.average_review_rating %}
+                   <small class="text-white"><i class="fas fa-star mr-1"></i>{{ product.average_review_rating }} / 5</small>
                 {% else %}
                     <small class="text-white">No Rating</small>
                 {% endif %}
+
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a href="{% url 'edit_product' product.id %}">Edit</a> | 
