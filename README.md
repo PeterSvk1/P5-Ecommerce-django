@@ -124,3 +124,14 @@ All my user stories, sprint that can be accessed using GitHub Issues, which serv
 <br>
 
 ## Design
+
+### Wireframes
+
+The wireframes for this project can be accessed [here.]()
+<br><br>
+
+### Database diagram
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/readme/diagram.png">
+</p>
