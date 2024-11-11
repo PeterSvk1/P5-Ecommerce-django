@@ -45,7 +45,7 @@ The website is built using Django framework, and follows an agile methodology ap
 
 ### Project Goal
 
-* The goal of Bartender Box is to provide a platform for users to easily order and enjoy pre-made cocktails at home. The website eliminates the need for users to search for recipes and gather ingredients by offering a curated selection of ready-to-drink cocktails.
+* The goal of SW shop is to provide a platform for users to easily order and enjoy pre-made cocktails at home. The website eliminates the need for users to search for recipes and gather ingredients by offering a curated selection of ready-to-drink cocktails.
 <br><br>
 
 ### User stories
