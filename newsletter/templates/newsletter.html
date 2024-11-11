@@ -13,8 +13,13 @@
 
     <div class="card1 mt-4">
     <!-- List of Latest Newsletters -->
-    <div class="mt-4">
+    <div class="mt-4">    
         <h2 class="text-center text-white">Latest Newsletters</h2>
+        {% if request.user.is_staff %}
+        <div class="text-center mb-3">
+            <a href="{% url 'create_newsletter' %}" class="btn btn-success">Create New Newsletter</a>
+        </div>
+        {% endif %}
         <div class="row justify-content-center">
             {% for newsletter in newsletters %}
                 <div class="col-md-4 mb-3">
