@@ -35,16 +35,4 @@
         </div>
     </div>
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    // Select all <small> elements that have a <ul> child
-    document.querySelectorAll("small > ul").forEach(function(ulElement) {
-        // Get the parent <small> element
-        let parentSmall = ulElement.parentElement;
-        
-        // Hide the <small> element from view
-        parentSmall.style.display = "none";
-    });
-});
-</script>
 {% endblock %}
