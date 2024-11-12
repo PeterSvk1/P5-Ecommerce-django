@@ -767,7 +767,7 @@ label {
 
 .card-footer a:hover {
     text-decoration: none;
-    color: red;
+    color: rgb(0, 129, 9);
 }
 
 /* Optional hover effect */
