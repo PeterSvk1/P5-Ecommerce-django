@@ -14,10 +14,14 @@
         <div class="card2 mx-auto">
             <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
                 {% csrf_token %}
-                {{ form|crispy }} <!-- Crispy forms styling for the form -->
+                <!-- {{ form|crispy }} -->
+                {{ form.username|as_crispy_field }}
+                {{ form.email|as_crispy_field }}
+                {{ form.password1|as_crispy_field }}
+                {{ form.password2|as_crispy_field }}
               
                 {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
                 {% endif %}
 
                 <!-- Sign Up button -->
@@ -31,4 +35,20 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Select all <small> elements that have a <ul> child
+        document.querySelectorAll("small > ul").forEach(function(ulElement) {
+            // Get the parent <small> element
+            let parentSmall = ulElement.parentElement;
+            
+            // Move the <ul> element out of the <small>
+            parentSmall.parentElement.insertBefore(ulElement, parentSmall);
+            
+            // Optionally, remove the empty <small> element
+            parentSmall.remove();
+        });
+    });
+</script>
 {% endblock %}
