@@ -153,3 +153,21 @@
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/shopbag.png">
 </p>
+
+## Shopping Bag page
+
+* On the checkout page, users can review their selected products before making a purchase. The page displays a summary of the items, including featured images, additional details, and the option to proceed with the checkout process connected via Stripe API.
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/checkout.png">
+</p>
+
+## Product managment
+
+* If the user has admin privileges, they have access to additional features for managing products. This includes adding new products including an image, editing existing products, and deleting products.
+
+* Adding product
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/addproduct.png">
+</p>

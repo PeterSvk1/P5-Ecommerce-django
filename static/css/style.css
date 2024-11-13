@@ -341,17 +341,7 @@ body {
     font-size: 1.2rem
 }
 
-/* Hide the actual file input but keep it accessible */
-input[type="file"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0; /* Make input invisible */
-    cursor: pointer; /* Keep pointer cursor */
-    
-}
+
 
 /* Optionally, you can style hover and active states */
 .btn-file:hover {
@@ -542,6 +532,37 @@ button[id^="increment-"]:hover {
     font-size: 16px;
     pointer-events: auto;
     opacity: 1; 
+}
+#id_category.form-select {
+    border-radius: .25rem !important;
+    width: 100%;
+    padding: 0px 3px; /* Padding for input fields */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+    background-color: #fff; 
+    color: black;
+    font-size: 16px;
+    pointer-events: auto;
+    opacity: 1; 
+}
+
+#new-image {
+    display: block; /* Ensure the input is visible */
+    padding: 8px;
+    border: 2px solid #000; /* Black border */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#new-image:hover {
+    background-color: #dc0a0a; /* Change border color on hover */
+    
+}
+           
+#new-image::-webkit-file-upload-button {
+    display: none;
 }
 
 /* Focus styling for input fields */

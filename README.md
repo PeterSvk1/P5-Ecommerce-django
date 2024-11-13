@@ -155,7 +155,7 @@ Colour pallet used for this website.
 
 ## Features
 
-Features of this project can be accessed [here.]()
+Features of this project can be accessed [here.](https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/FEATURES.md)
 <br><br>
 * Add pagination numbers to display certain number of products per page.
 * Upgrade to support social authentication in addition to normal login.
@@ -229,7 +229,7 @@ Testing of this project can be accessed [here.]()
 * Django==4.2
 * django-allauth==0.57.2
 * django-countries==7.2.1
-* django-crispy-forms==1.14.0
+* django-crispy-forms==2.3
 * django-storages==1.14.4
 * gunicorn==23.0.0
 * jmespath==1.0.1
