@@ -9,7 +9,6 @@ from django.db.models import Avg
 from .models import Product, Category
 from .forms import ProductForm
 
-# Create your views here.
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -30,7 +29,8 @@ def all_products(request):
             if sortkey == 'category':
                 sortkey = 'category__name'
             if sortkey == 'rating':
-                products = products.annotate(average_rating=Avg('reviews__rating'))
+                products = products.annotate(
+                    average_rating=Avg('reviews__rating'))
                 sortkey = 'average_rating'
 
             if 'direction' in request.GET:
@@ -38,7 +38,7 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -47,10 +47,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -65,11 +67,10 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
-#@login_required
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
-    reviews = product.reviews.all()  # Get reviews for the product
+    reviews = product.reviews.all()
 
     if request.method == 'POST':
         form = ReviewForm(request.POST)
@@ -83,7 +84,9 @@ def product_detail(request, product_id):
             product.save()
 
             messages.success(request, 'Your review has been submitted!')
-            return redirect(reverse('product_detail', args=[product.id]))  # Redirect to the same product detail page
+            return redirect(
+                reverse(
+                    'product_detail', args=[product.id]))
     else:
         form = ReviewForm()
 
@@ -110,10 +113,13 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. Please ensure the form is valid.'
+                )
     else:
         form = ProductForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -137,7 +143,10 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.'
+                )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')

@@ -170,6 +170,43 @@ views.py
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_views.png">
 </p>
 
+**Products app**
+
+admin.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/products_admin.png">
+</p>
+
+apps.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/products_apps.png">
+</p>
+
+forms.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/products_forms.png">
+</p>
+
+models.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/products_models.png">
+</p>
+
+urls.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/products_urls.png">
+</p>
+
+views.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/products_views.png">
+</p>
+
+widgets.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/products_widgets.png">
+</p>
+
 
 </details>
 
