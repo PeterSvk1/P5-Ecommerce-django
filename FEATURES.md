@@ -24,11 +24,11 @@
 * For smaller devices navbar is collapsible
 
 <p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/colaps_mobile.png">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/collaps_mobile.png">
 </p>
 
 <p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/colaps_mobile2.png">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/collaps_mobile2.png">
 </p>
 
 * Search bar collapsed
@@ -151,5 +151,5 @@
 * Users can proceed to the checkout page to complete their purchase.
 
 <p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/shopbag.jpg">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/shopbag.png">
 </p>
