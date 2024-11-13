@@ -6,10 +6,8 @@ Python
 
 * Python code was tested using PEP8 Code Institute [Python Linter Validator](https://pep8ci.herokuapp.com/)
 
-<details>
-
 **Bag app**
-
+<details>
 views.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/bag_view.png">
@@ -29,9 +27,10 @@ apps.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/bag_apps.png">
 </p>
+</details>
 
 **Checkout app**
-
+<details>
 views.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_view.png">
@@ -76,9 +75,10 @@ webhook.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_webhook.png">
 </p>
+</details>
 
 **Error app**
-
+<details>
 apps.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/error_apps.png">
@@ -88,9 +88,10 @@ views.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/error_view.png">
 </p>
+</details>
 
 **Home app**
-
+<details>
 apps.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/home_apps.png">
@@ -105,9 +106,10 @@ urls.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/home_urls.png">
 </p>
+</details>
 
 **Newsletter app**
-
+<details>
 admin.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_admin.png">
@@ -137,9 +139,10 @@ views.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_views.png">
 </p>
+</details>
 
 **Newsletter app**
-
+<details>
 admin.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_admin.png">
@@ -169,9 +172,10 @@ views.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_views.png">
 </p>
+</details>
 
 **Products app**
-
+<details>
 admin.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/products_admin.png">
@@ -206,7 +210,6 @@ widgets.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/products_widgets.png">
 </p>
-
 
 </details>
 
