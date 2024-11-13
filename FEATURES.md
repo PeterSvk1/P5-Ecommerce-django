@@ -216,7 +216,7 @@
 </p>
 
 <p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/toast3.png">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/toast2.png">
 </p>
 
 <p align="center">
