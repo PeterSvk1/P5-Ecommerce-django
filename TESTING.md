@@ -240,6 +240,40 @@ views.py
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/profiles_views.png">
 </p>
 
+</details>
+
+**Profiles app**
+<details>
+
+admin.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/reviews_admin.png">
+</p>
+
+apps.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/reviews_apps.png">
+</p>
+
+forms.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/reviews_forms.png">
+</p>
+
+models.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/reviews_models.png">
+</p>
+
+urls.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/reviews_urls.png">
+</p>
+
+views.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/reviews_views.png">
+</p>
 
 </details>
 

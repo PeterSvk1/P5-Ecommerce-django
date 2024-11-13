@@ -1,10 +1,11 @@
 from django import forms
-from .models import Review, ContactMessage  
+from .models import Review, ContactMessage
+
 
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = ['comment','rating']
+        fields = ['comment', 'rating']
         widgets = {
             'comment': forms.Textarea(attrs={
                 'rows': 2,
@@ -15,6 +16,7 @@ class ReviewForm(forms.ModelForm):
                 choices=[(i/10, str(i/10)) for i in range(10, 51, 10)])
         }
 
+
 class ContactForm(forms.Form):
     name = forms.CharField(
         max_length=100,
@@ -22,7 +24,7 @@ class ContactForm(forms.Form):
         widget=forms.TextInput(attrs={
             'class': 'form-control',
             'placeholder': 'Enter your name',
-            'id': 'name' 
+            'id': 'name'
         })
     )
     email = forms.EmailField(
