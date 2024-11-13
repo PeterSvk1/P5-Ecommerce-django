@@ -26,11 +26,16 @@ def add_to_bag(request, item_id):
     if new_quantity > 5:
         bag[item_id] = 5
         messages.error(
-            request, f'Sorry, you can only have a maximum of 5 {product.name} in your bag.')
+            request,
+            f'Sorry, max of 5 items per user {product.name} in your bag.'
+            )
     else:
         bag[item_id] = new_quantity
         messages.success(
-            request, f'Added {quantity} more {product.name} to your bag. Total: {bag[item_id]}')
+            request,
+            f'Added {quantity} more {product.name} to your bag.'
+            f'Total: {bag[item_id]}'
+            )
 
     request.session['bag'] = bag
 
@@ -46,7 +51,9 @@ def adjust_bag(request, item_id):
 
     if quantity > 0:
         bag[item_id] = quantity
-        messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+        messages.success(
+            request, f'Updated {product.name} quantity to {bag[item_id]}'
+            )
     else:
         if item_id in bag:
             bag.pop(item_id, None)
