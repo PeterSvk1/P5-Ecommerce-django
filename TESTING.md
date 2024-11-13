@@ -106,6 +106,70 @@ urls.py
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/home_urls.png">
 </p>
 
+**Newsletter app**
+
+admin.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_admin.png">
+</p>
+
+apps.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_apps.png">
+</p>
+
+forms.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_forms.png">
+</p>
+
+models.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_models.png">
+</p>
+
+urls.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_urls.png">
+</p>
+
+views.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_views.png">
+</p>
+
+**Newsletter app**
+
+admin.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_admin.png">
+</p>
+
+apps.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_apps.png">
+</p>
+
+forms.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_forms.png">
+</p>
+
+models.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_models.png">
+</p>
+
+urls.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_urls.png">
+</p>
+
+views.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_views.png">
+</p>
+
 
 </details>
 

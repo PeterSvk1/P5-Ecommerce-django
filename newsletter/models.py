@@ -1,12 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class NewsletterSubscription(models.Model):
     email = models.EmailField(unique=True)
     subscribed_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.email
+
 
 class NewsletterPost(models.Model):
     title = models.CharField(max_length=200)

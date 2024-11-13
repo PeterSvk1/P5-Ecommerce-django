@@ -6,6 +6,7 @@ from django.conf import settings
 from .models import NewsletterPost
 from django.contrib.auth.decorators import login_required
 
+
 def subscribe(request):
     if request.method == 'POST':
         form = NewsletterSubscriptionForm(request.POST)
@@ -23,16 +24,22 @@ def subscribe(request):
                 fail_silently=False,
             )
 
-            messages.success(request, 'Thank you for subscribing! An email has been sent to confirm your subscription.')
+            messages.success(
+                request,
+                'Thank you for subscribing! An email has been sent to '
+                'confirm your subscription.'
+                )
             return redirect('home')
         else:
             messages.error(request, 'Error: Already subscribed!.')
 
     return redirect('home')
 
+
 def newsletter_list(request):
     newsletters = NewsletterPost.objects.all().order_by('-published_date')
     return render(request, 'newsletter.html', {'newsletters': newsletters})
+
 
 @login_required
 def create_newsletter(request):
