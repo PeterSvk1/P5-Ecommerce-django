@@ -77,6 +77,36 @@ webhook.py
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_webhook.png">
 </p>
 
+**Error app**
+
+apps.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/error_apps.png">
+</p>
+
+views.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/error_view.png">
+</p>
+
+**Home app**
+
+apps.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/home_apps.png">
+</p>
+
+views.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/home_view.png">
+</p>
+
+urls.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/home_urls.png">
+</p>
+
+
 </details>
 
 HTML
