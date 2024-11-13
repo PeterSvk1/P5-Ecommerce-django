@@ -33,7 +33,7 @@
 #payment-form .form-control,
 #card-element {
     color: black;
-    border: 5px solid rgb(rgb(155, 6, 6));
+    border: 5px solid rgb(146, 12, 12);
 }
 
 #loading-overlay {

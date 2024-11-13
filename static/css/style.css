@@ -72,7 +72,7 @@ body {
     max-width: 300px; 
     max-height: 300px; 
     display: block;
-     margin: 0 left; 
+    margin-left: 0; 
 }
 
 
@@ -120,7 +120,7 @@ body {
 }
 
 .search-bar {
-    border: 5px solid #ccc;
+    border: 5px solid #ff0c0c;
     border-radius: 5px;
     box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6);
     transition: border-color 0.3s ease; 
@@ -128,7 +128,7 @@ body {
 
 /* Input Field Styles */
 .search-bar input[type="text"] {
-    background: rgb(rgb(201, 214, 212));
+    background: rgb(255, 186, 186);
     border: none; 
     border-radius: 5px 0 0 5px; 
     padding: 10px; 
@@ -138,7 +138,8 @@ body {
 /* Change border color on focus */
 .search-bar input[type="text"]:focus {
     outline: none;
-    border-color: #010000;
+    /* border-color: #010000; */
+    background: rgb(255, 255, 255);
 }
 
 /* Button Styles */
@@ -569,7 +570,7 @@ button[id^="increment-"]:hover {
 .form-control:focus {
     background-color: white; 
     border-color: #070101; 
-    box-shadow: 0 0 5px rgba(11, 7, 7, 0.5);/
+    box-shadow: 0 0 5px rgba(11, 7, 7, 0.5);
 }
 
 

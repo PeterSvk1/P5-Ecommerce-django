@@ -294,7 +294,7 @@ CSS
 * CSS code was tested using [Jigsaw W3 Validator](https://jigsaw.w3.org/)
 
 <p align="center">
-<img src="">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/cssvalid.png">
 </p>
 
 JavaScript
@@ -323,3 +323,5 @@ The website has been tested thoroughly on several different browsers.
 * Microsoft Edge
 * Safari
 * Opera
+
+[Back to readme](https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/README.md)
