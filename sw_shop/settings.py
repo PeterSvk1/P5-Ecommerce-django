@@ -120,12 +120,12 @@ SITE_ID = 1
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
@@ -176,9 +176,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 if 'USE_AWS' in os.environ:
 
     AWS_S3_OBJECT_PARAMETERS = {
-    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-    'CacheControl': 'max-age=94608000',
-}
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
     AWS_STORAGE_BUCKET_NAME = 'swshop'
     AWS_REGION_NAME = 'Europe (Stockholm) eu-north-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
@@ -209,14 +210,13 @@ AUTHENTICATION_BACKENDS = [
 
     # `allauth` specific authentication methods, such as login by email
     'allauth.account.auth_backends.AuthenticationBackend',
-    #...
+
 ]
 
 FREE_DELIVERY_THRESHOLD = 100
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
-#STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_EMAIL')
 

@@ -141,39 +141,6 @@ views.py
 </p>
 </details>
 
-**Newsletter app**
-<details>
-admin.py
-<p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_admin.png">
-</p>
-
-apps.py
-<p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_apps.png">
-</p>
-
-forms.py
-<p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_forms.png">
-</p>
-
-models.py
-<p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_models.png">
-</p>
-
-urls.py
-<p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_urls.png">
-</p>
-
-views.py
-<p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/newsletter_views.png">
-</p>
-</details>
-
 **Products app**
 <details>
 admin.py
@@ -274,6 +241,41 @@ views.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/reviews_views.png">
 </p>
+
+</details>
+
+**Wishlist app**
+<details>
+apps.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/wishlist_apps.png">
+</p>
+
+models.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/wishlist_models.png">
+</p>
+
+urls.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/wishlist_urls.png">
+</p>
+
+views.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/wishlist_views.png">
+</p>
+
+</details>
+
+**Sw_shop app**
+<details>
+
+urls.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/shop_urls.png">
+</p>
+
 
 </details>
 
