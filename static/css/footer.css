@@ -79,10 +79,10 @@ form .far {
 }
 
 form input {
+    border-radius: 0.25rem;
     width: 100%;
-    background: transparent;
-    color: #ffffff; /* Set input text color to white */
-    outline: none;
+    background: white;
+    color: black; /* Set input text color to white */
 }
 
 form button {

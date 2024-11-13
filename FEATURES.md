@@ -171,3 +171,56 @@
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/addproduct.png">
 </p>
+
+* Edit product
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/editproduct.png">
+</p>
+
+* Delete product
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/delete.png">
+</p>
+
+## Search page
+* The search page allows users to search for specific products using keywords. The search results page displays all the relevant products based on the search query.
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/search_result.png">
+</p>
+
+# Additional features
+
+* The website includes a newsletter feature where users can subscribe to receive updates. Upon subscribing, users will see a success message. If user is already subscribed he gets error message.
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/newsletter.png">
+</p>
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/newsletter_success.png">
+</p>
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/error.png">
+</p>
+
+# Messages Container
+* The messages container is a component that displays informative messages to the user after various actions, such as submitting a form, updating a profile, or adding a product to the shopping bag.
+* When an action is performed, a message is shown in the container, providing feedback or confirmation to the user. The message remains visible for few seconds and is then automatically dismissed.
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/toast1.png">
+</p>
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/toast3.png">
+</p>
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/features/toast3.png">
+</p>
+
+[Back to readme](https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/README.md)
