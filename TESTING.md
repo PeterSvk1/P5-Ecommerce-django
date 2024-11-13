@@ -67,6 +67,11 @@ signals.py
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_signals.png">
 </p>
 
+webhook_handler.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_webhookhandler.png">
+</p>
+
 webhook.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_webhook.png">
