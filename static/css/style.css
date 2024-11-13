@@ -567,17 +567,17 @@ label {
 }
 
 .card2 .btn1, .card2 .btn2 {
-    width: 100%; /* Full width buttons */
+    width: 100%; 
     margin-top: 10px; /* Space between buttons */
     padding: 10px; /* Padding inside buttons */
     border-radius: 5px; /* Rounded corners for buttons */
 }
 
 .card2 input.form-control {
-    border-radius: 5px; /* Adjust the value for more or less roundness */
-    border: 1px solid #ccc; /* Optional: Define border color */
-    padding: 10px; /* Optional: Add padding for better spacing */
-    transition: border-color 0.3s; /* Optional: Smooth transition for border color */
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    padding: 10px;
+    transition: border-color 0.3s;
 }
 
 .card2 input.form-control:focus {
