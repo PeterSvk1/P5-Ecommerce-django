@@ -19,6 +19,64 @@ urls.py
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/bag_urls.png">
 </p>
+
+contexts.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/bag_context.png">
+</p>
+
+apps.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/bag_apps.png">
+</p>
+
+**Checkout app**
+
+views.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_view.png">
+</p>
+
+urls.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_urls.png">
+</p>
+
+apps.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_apps.png">
+</p>
+
+admin.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_admin.png">
+</p>
+
+forms.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_forms.png">
+</p>
+
+models.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_modles.png">
+</p>
+
+signals.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_signals.png">
+</p>
+
+webhook_handler.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/bag_apps.png">
+</p>
+
+webhook.py
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/bag_apps.png">
+</p>
+
 </details>
 
 HTML

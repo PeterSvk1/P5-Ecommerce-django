@@ -186,7 +186,7 @@ X page:
 
 ## Testing
 
-Testing of this project can be accessed [here.]()
+Testing of this project can be accessed [here.](https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/TESTING.md)
 <br> <br>
 
 ## Technologies Used
