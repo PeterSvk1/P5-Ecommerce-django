@@ -59,7 +59,7 @@ forms.py
 
 models.py
 <p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_modles.png">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_models.png">
 </p>
 
 signals.py
@@ -69,12 +69,12 @@ signals.py
 
 webhook_handler.py
 <p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/bag_apps.png">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_webhookhandler.png">
 </p>
 
 webhook.py
 <p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/bag_apps.png">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/checkout_webhook.png">
 </p>
 
 </details>
