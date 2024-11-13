@@ -7,6 +7,7 @@ from wishlistapp.models import WishlistItem
 from checkout.models import Order
 from reviews.models import Review
 
+
 @login_required
 def profile(request):
     """ Display the user's profile. """
@@ -16,7 +17,7 @@ def profile(request):
     wishlist_items = WishlistItem.objects.filter(user=request.user)
 
     # Fetch reviews for the user
-    reviews = Review.objects.filter(user=request.user)  # Get reviews made by the user
+    reviews = Review.objects.filter(user=request.user)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -24,10 +25,13 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Update failed. Please ensure the form is valid.'
+                )
     else:
         form = UserProfileForm(instance=profile)
-    
+
     # Get user's orders
     orders = profile.orders.all()
 
