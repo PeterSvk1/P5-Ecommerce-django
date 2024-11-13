@@ -242,7 +242,7 @@ views.py
 
 </details>
 
-**Profiles app**
+**Reviews app**
 <details>
 
 admin.py
