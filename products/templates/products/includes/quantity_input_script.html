@@ -1,60 +1,53 @@
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Select all decrement and increment buttons
-        const decrementButtons = document.querySelectorAll('.decrement-qty');
-        const incrementButtons = document.querySelectorAll('.increment-qty');
-    
-        // Function to update button states based on quantity
-        function updateButtonStates(qtyInput) {
-            const qty = parseInt(qtyInput.value);
-            const itemId = qtyInput.getAttribute('data-item_id');
-            const decrementBtn = document.querySelector(`.decrement-qty[data-item_id="${itemId}"]`);
-            const incrementBtn = document.querySelector(`.increment-qty[data-item_id="${itemId}"]`);
+/* jshint esversion: 6 */
+document.addEventListener("DOMContentLoaded", function() {
+    // Select all decrement and increment buttons
+    const decrementButtons = document.querySelectorAll('.decrement-qty');
+    const incrementButtons = document.querySelectorAll('.increment-qty');
 
-            // Disable decrement button if qty is 0
-            if (qty <= 0) {
-                decrementBtn.disabled = true;
-            } else {
-                decrementBtn.disabled = false;
+    // Function to update button states based on quantity
+    function updateButtonStates(qtyInput) {
+        const qty = parseInt(qtyInput.value);
+        const itemId = qtyInput.getAttribute('data-item_id');
+        const decrementBtn = document.querySelector(`.decrement-qty[data-item_id="${itemId}"]`);
+        const incrementBtn = document.querySelector(`.increment-qty[data-item_id="${itemId}"]`);
+
+        // Disable decrement button if qty is 0
+        decrementBtn.disabled = qty <= 0;
+
+        // Disable increment button if qty is 5
+        incrementBtn.disabled = qty >= 5;
+    }
+
+    // Decrement button event listener
+    decrementButtons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent form submission
+            const qtyInput = document.getElementById(`id_qty_${this.getAttribute('data-item_id')}`);
+            let qty = parseInt(qtyInput.value);
+            if (qty > 0) {
+                qtyInput.value = qty - 1;
+                updateButtonStates(qtyInput); // Update button states
             }
-
-            // Disable increment button if qty is 5
-            if (qty >= 5) {
-                incrementBtn.disabled = true;
-            } else {
-                incrementBtn.disabled = false;
-            }
-        }
-
-        // Decrement button event listener
-        decrementButtons.forEach(function(button) {
-            button.addEventListener("click", function(event) {
-                event.preventDefault(); // Prevent form submission
-                const qtyInput = document.getElementById(`id_qty_${this.getAttribute('data-item_id')}`);
-                let qty = parseInt(qtyInput.value);
-                if (qty > 0) {
-                    qtyInput.value = qty - 1;
-                    updateButtonStates(qtyInput); // Update button states
-                }
-            });
-        });
-    
-        // Increment button event listener
-        incrementButtons.forEach(function(button) {
-            button.addEventListener("click", function(event) {
-                event.preventDefault(); // Prevent form submission
-                const qtyInput = document.getElementById(`id_qty_${this.getAttribute('data-item_id')}`);
-                let qty = parseInt(qtyInput.value);
-                if (qty < 5) {
-                    qtyInput.value = qty + 1;
-                    updateButtonStates(qtyInput); // Update button states
-                }
-            });
-        });
-
-        // Initial state of buttons for existing input values
-        document.querySelectorAll('.qty_input').forEach(function(qtyInput) {
-            updateButtonStates(qtyInput);
         });
     });
+
+    // Increment button event listener
+    incrementButtons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent form submission
+            const qtyInput = document.getElementById(`id_qty_${this.getAttribute('data-item_id')}`);
+            let qty = parseInt(qtyInput.value);
+            if (qty < 5) {
+                qtyInput.value = qty + 1;
+                updateButtonStates(qtyInput); // Update button states
+            }
+        });
+    });
+
+    // Initial state of buttons for existing input values
+    document.querySelectorAll('.qty_input').forEach(function(qtyInput) {
+        updateButtonStates(qtyInput);
+    });
+});
 </script>

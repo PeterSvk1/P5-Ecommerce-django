@@ -301,14 +301,14 @@ JavaScript
 
 * Javascript code was tested using [JSHint](https://jshint.com/)
 
-main.js
+all js scripts located on htmls
 <p align="center">
-<img src="">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/js_all_htmls.png">
 </p>
 
 stripe_elements.js
 <p align="center">
-<img src="">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/js_stripe.png">
 </p>
 
 
