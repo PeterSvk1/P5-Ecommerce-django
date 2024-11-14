@@ -72,9 +72,13 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.all()
 
-    existing_review = Review.objects.filter(user=request.user, product=product).first()
+    if request.user.is_authenticated:
+        existing_review = Review.objects.filter(
+            user=request.user, product=product).first()
+    else:
+        existing_review = None
 
-    if request.method == 'POST':
+    if request.method == 'POST' and request.user.is_authenticated:
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
@@ -82,13 +86,12 @@ def product_detail(request, product_id):
             review.product = product
             review.save()
 
+            # Update product rating
             product.rating = product.average_review_rating()
             product.save()
 
             messages.success(request, 'Your review has been submitted!')
-            return redirect(
-                reverse(
-                    'product_detail', args=[product.id]))
+            return redirect(reverse('product_detail', args=[product.id]))
     else:
         form = ReviewForm()
 

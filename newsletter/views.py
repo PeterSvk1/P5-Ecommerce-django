@@ -3,7 +3,7 @@ from django.contrib import messages
 from .forms import NewsletterSubscriptionForm, NewsletterPostForm
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import NewsletterPost
+from .models import NewsletterPost, NewsletterSubscription
 from django.contrib.auth.decorators import login_required
 
 
@@ -11,9 +11,14 @@ def subscribe(request):
     if request.method == 'POST':
         form = NewsletterSubscriptionForm(request.POST)
         if form.is_valid():
+            email = form.cleaned_data['email']
+
+            if NewsletterSubscription.objects.filter(email=email).exists():
+                messages.error(request, 'Error: You are already subscribed!')
+                return render(request, 'home.html', {'form': form})
+
             form.save()
 
-            email = form.cleaned_data['email']
             subject = 'Subscription Confirmation'
             message = 'Thank you for subscribing to our newsletter!'
             send_mail(
@@ -31,7 +36,7 @@ def subscribe(request):
                 )
             return redirect('home')
         else:
-            messages.error(request, 'Error: Already subscribed!.')
+            messages.error(request, 'Already subscribed!')
 
     return redirect('home')
 
