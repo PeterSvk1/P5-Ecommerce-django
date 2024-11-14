@@ -4,6 +4,7 @@ from .forms import ReviewForm
 from .models import Review
 from products.models import Product
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseForbidden
 from django.core.mail import send_mail
 from .forms import ContactForm
 from .models import ContactMessage
@@ -82,3 +83,14 @@ def contact_view(request):
         form = ContactForm()
 
     return render(request, 'contact/contact.html', {'form': form})
+
+@login_required
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+
+    if review.user != request.user:
+        return HttpResponseForbidden("You cant do this")
+
+    review.delete()
+    messages.success(request, 'Your review has been deleted.')
+    return redirect('reviews_list')

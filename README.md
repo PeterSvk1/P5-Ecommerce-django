@@ -159,9 +159,9 @@ Features of this project can be accessed [here.](https://github.com/PeterSvk1/P5
 <br><br>
 * Add pagination numbers to display certain number of products per page.
 * Upgrade to support social authentication in addition to normal login.
-* Enable the author to edit or delete review comments.
+* Enable the author to edit review comments.
 * Allow registered users to upload profile images.
-* Allow users to receive information about new products added to website via our newsletter system where then can subscribe.
+* Allow users to receive information about new products added to website via our custom newsletter system where then can subscribe.
 
 ## Business Model
 

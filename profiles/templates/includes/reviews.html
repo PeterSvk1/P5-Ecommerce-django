@@ -7,6 +7,7 @@
                 <th class="text-white">Product Name</th>
                 <th class="text-white">Review</th>
                 <th class="text-white">Posted On</th>
+                <th class="text-white">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -19,10 +20,17 @@
                     </td>
                     <td class="text-white">{{ review.comment }}</td>
                     <td class="text-white">{{ review.created_at|date:"M d, Y" }}</td>
+                    <td class="text-white">
+                        {% if review.user == request.user %}
+                            <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm">
+                                Delete
+                            </a>
+                        {% endif %}
+                    </td>
                 </tr>
             {% empty %}
                 <tr>
-                    <td colspan="3" class="text-white">No reviews yet.</td>
+                    <td colspan="4" class="text-white">No reviews yet.</td>
                 </tr>
             {% endfor %}
         </tbody>
