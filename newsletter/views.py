@@ -13,6 +13,10 @@ def subscribe(request):
         if form.is_valid():
             email = form.cleaned_data['email']
 
+            if NewsletterSubscription.objects.filter(email=email).exists():
+                messages.error(request, 'Already subscribed!')
+                return redirect('home')
+
             form.save()
 
             subject = 'Subscription Confirmation'

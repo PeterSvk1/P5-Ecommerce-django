@@ -27,28 +27,31 @@ class NewsletterSubscriptionTests(TestCase):
             mail.outbox[0].subject, 'Subscription Confirmation')
 
     def test_subscription_form_invalid_email_already_subscribed(self):
-        """ Test that the form shows an error when
-        the user tries to subscribe with an already used email. """
+        """ Test that the form shows an error
+        when the user tries to subscribe with an already used email. """
 
-        NewsletterSubscription.objects.create(email='test@example.com')
+        existing_email = 'test@example.com'
+        NewsletterSubscription.objects.create(email=existing_email)
 
-        # Prepare the form data
         url = reverse('subscribe')
-        data = {'email': 'test@example.com'}
-
+        data = {'email': existing_email}
         response = self.client.post(url, data)
 
         self.assertRedirects(response, reverse('home'))
 
         messages_list = list(response.wsgi_request._messages)
-        self.assertTrue(any(
-            message.message == (
-                'Already subscribed!' for message in messages_list)
-        ))
+
+        error_message = 'Already subscribed!'
+
+        error_message_found = any(
+            message.message == error_message for message in messages_list
+        )
+
+        self.assertTrue(error_message_found)
 
         self.assertEqual(
             NewsletterSubscription.objects.filter(
-                email='test@example.com').count(), 1)
+                email=existing_email).count(), 1)
 
     def test_newsletter_list_view(self):
         """ Test that newsletters are
