@@ -8,5 +8,7 @@ urlpatterns = [
         submit_review, name='submit_review'),
     path('reviews/', reviews_list_view, name='reviews_list'),
     path('contact/', contact_view, name='contact'),
-    path('delete-review/<int:review_id>/', delete_review, name='delete_review'),
+    path(
+        'delete-review/<int:review_id>/',
+        delete_review, name='delete_review'),
 ]

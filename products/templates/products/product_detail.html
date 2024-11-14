@@ -19,7 +19,7 @@
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
-                        {% else %}
+                    {% else %}
                         <a href="" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
@@ -78,21 +78,23 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4 card1 margin0">
                 <div class="product-details-container mb-5 mt-md-5">
-
                     <h3 class="text-white">Leave a Review</h3>
-                <hr class="hr2">
-                {% if request.user.is_authenticated %}
-                <form action="{% url 'product_detail' product.id %}" method="POST">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <div class="wrap">
-                        <button type="submit" class="button">Submit Review</button>
-                    </div>
-                </form>
+                    <hr class="hr2">
+                    {% if request.user.is_authenticated %}
+                        {% if not existing_review %}
+                            <form action="{% url 'submit_review' product.id %}" method="POST">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <div class="wrap">
+                                    <button type="submit" class="button">Submit Review</button>
+                                </div>
+                            </form>
+                        {% else %}
+                            <p class="text-white">You have already submitted a review for this product.</p>
+                        {% endif %}
                     {% else %}
-                        <h4 class="text-white">You need to <a href="{% url 'account_login' %}"> log in</a> to leave a review.</h4>
+                        <h4 class="text-white">You need to <a href="{% url 'account_login' %}">log in</a> to leave a review.</h4>
                     {% endif %}
-
 
                     <hr class="hr2">
                     <h3 class="text-white">Reviews</h3>
@@ -104,17 +106,17 @@
                                 <p class="text-white">{{ review.comment }}</p>
                                 <p class="text-white"><em>Posted on {{ review.created_at }}</em></p>
                             </li>
-                            
                         {% empty %}
                             <li class="text-white">No reviews yet.</li>
                         {% endfor %}
-                        </ul>
+                    </ul>
                     <hr class="dotted">
                 </div>
             </div>
         </div>
     </div>
-    {% endblock %}
+{% endblock %}
+
 {% block postloadjs %}
 {{ block.super }}
 {% endblock %}

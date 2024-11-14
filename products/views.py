@@ -72,6 +72,8 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.all()
 
+    existing_review = Review.objects.filter(user=request.user, product=product).first()
+
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -94,6 +96,7 @@ def product_detail(request, product_id):
         'product': product,
         'form': form,
         'reviews': reviews,
+        'existing_review': existing_review
     }
 
     return render(request, 'products/product_detail.html', context)

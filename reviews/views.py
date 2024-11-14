@@ -15,6 +15,9 @@ import os
 def submit_review(request, product_id):
     product = get_object_or_404(Product, id=product_id)
 
+    existing_review = Review.objects.filter(
+        user=request.user, product=product).first()
+
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -32,7 +35,9 @@ def submit_review(request, product_id):
 
     return render(
         request, 'reviews/review_form.html', {
-            'form': form, 'product': product})
+            'form': form,
+            'product': product,
+            'existing_review': existing_review})
 
 
 def reviews_list_view(request):
@@ -83,6 +88,7 @@ def contact_view(request):
         form = ContactForm()
 
     return render(request, 'contact/contact.html', {'form': form})
+
 
 @login_required
 def delete_review(request, review_id):
