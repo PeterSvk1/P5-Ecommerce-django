@@ -8,7 +8,6 @@ from django.utils.html import strip_tags
 from django.core.mail import send_mail
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-
 from products.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
