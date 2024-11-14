@@ -6,10 +6,12 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.messages import get_messages
 
+
 class ProductModelTestCase(TestCase):
     def setUp(self):
         """Set up test data for Product model"""
-        category = Category.objects.create(name='Electronics', friendly_name='Electronics')
+        category = Category.objects.create(
+            name='Electronics', friendly_name='Electronics')
         self.product = Product.objects.create(
             category=category,
             sku='12345',
@@ -18,7 +20,8 @@ class ProductModelTestCase(TestCase):
             price=50.00
         )
         # Create a user for review
-        self.user = User.objects.create_user(username='testuser', password='testpassword')
+        self.user = User.objects.create_user(
+            username='testuser', password='testpassword')
 
     def test_average_review_rating_no_reviews(self):
         """Test the average rating with no reviews"""
@@ -44,7 +47,8 @@ class ProductModelTestCase(TestCase):
 class AllProductsViewTestCase(TestCase):
     def setUp(self):
         """Set up test data for the all_products view"""
-        category = Category.objects.create(name='Electronics', friendly_name='Electronics')
+        category = Category.objects.create(
+            name='Electronics', friendly_name='Electronics')
         self.product1 = Product.objects.create(
             category=category,
             sku='12345',
@@ -69,7 +73,8 @@ class AllProductsViewTestCase(TestCase):
 
     def test_product_sort_by_name(self):
         """Test that products are sorted by name"""
-        response = self.client.get(reverse('products') + '?sort=name&direction=asc')
+        response = self.client.get(
+            reverse('products') + '?sort=name&direction=asc')
         self.assertContains(response, 'Test Product 1')
         self.assertContains(response, 'Test Product 2')
 
@@ -81,7 +86,7 @@ class AllProductsViewTestCase(TestCase):
 
 
 class ProductDetailViewTestCase(TestCase):
-    
+
     def setUp(self):
         self.user = User.objects.create_user(
             username='testuser', password='password123'
@@ -113,9 +118,9 @@ class ProductDetailViewTestCase(TestCase):
         product = Product.objects.get(id=self.product.id)
         self.assertEqual(product.reviews.count(), 1)
 
-
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(str(messages[0]), 'Your review has been submitted!')
+
 
 class ProductCRUDTestCase(TestCase):
     def setUp(self):
@@ -146,18 +151,18 @@ class ProductCRUDTestCase(TestCase):
         new_product = Product.objects.get(name='New Product')
         self.assertEqual(new_product.price, 75.00)
 
-
     def test_edit_product(self):
         """Test editing a product"""
         self.client.login(username='admin', password='adminpassword')
-        response = self.client.post(reverse('edit_product', args=[self.product.id]), {
-            'category': self.category.id,
-            'sku': '12345',
-            'name': 'Updated Product',
-            'description': 'Updated description',
-            'price': 7,
-            'rating': 4
-        })
+        response = self.client.post(
+            reverse('edit_product', args=[self.product.id]), {
+                'category': self.category.id,
+                'sku': '12345',
+                'name': 'Updated Product',
+                'description': 'Updated description',
+                'price': 7,
+                'rating': 4
+            })
         self.assertEqual(response.status_code, 302)
         self.product.refresh_from_db()
         self.assertEqual(self.product.name, 'Updated Product')
@@ -166,7 +171,10 @@ class ProductCRUDTestCase(TestCase):
     def test_delete_product(self):
         """Test deleting a product"""
         self.client.login(username='admin', password='adminpassword')
-        response = self.client.post(reverse('delete_product', args=[self.product.id]))
-        self.assertEqual(response.status_code, 302)  # Redirect to products list
+        response = self.client.post(
+            reverse('delete_product', args=[self.product.id]))
+        self.assertEqual(
+            response.status_code, 302)  # Redirect to products list
+
         with self.assertRaises(Product.DoesNotExist):
             Product.objects.get(id=self.product.id)

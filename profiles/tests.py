@@ -9,6 +9,7 @@ from profiles.models import UserProfile
 from products.models import Product
 from django.urls import reverse
 
+
 class UserProfileModelTestCase(TestCase):
 
     def setUp(self):
@@ -92,7 +93,8 @@ class UserProfileViewTestCase(TestCase):
         self.client.login(username='testuser', password='testpassword')
 
         # Create or get UserProfile
-        self.profile, created = UserProfile.objects.get_or_create(user=self.user)
+        self.profile, created = UserProfile.objects.get_or_create(
+            user=self.user)
 
         # Create a Product object
         self.product = Product.objects.create(
@@ -130,13 +132,14 @@ class UserProfileViewTestCase(TestCase):
         )
 
     def test_profile_view(self):
-        """Test that the profile view loads the correct context and renders the profile."""
+        """Test that the profile view loads
+        the correct context and renders the profile."""
         response = self.client.get(reverse('profile'))
 
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Test Product')  # Check for wishlist item
-        self.assertContains(response, 'Great product!')  # Check for review
-        self.assertContains(response, '12345')  # Check for order number
+        self.assertContains(response, 'Test Product')
+        self.assertContains(response, 'Great product!')
+        self.assertContains(response, '12345')
 
     def test_order_history_view(self):
         """Test that the order history view loads the correct order details."""
@@ -144,4 +147,5 @@ class UserProfileViewTestCase(TestCase):
         response = self.client.get(reverse('profile'))
 
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Test Product')  # Check for order product
+        self.assertContains(
+            response, 'Test Product')  # Check for order product

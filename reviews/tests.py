@@ -11,7 +11,8 @@ class ReviewViewsTestCase(TestCase):
 
     def setUp(self):
         if not User.objects.filter(username='admin').exists():
-            User.objects.create_superuser('admin', 'lineage4ever88@gmail.com', 'password')
+            User.objects.create_superuser(
+                'admin', 'lineage4ever88@gmail.com', 'password')
 
         self.user = User.objects.create_user(
             username='reviewuser', password='reviewpassword')
@@ -53,7 +54,8 @@ class ReviewViewsTestCase(TestCase):
 
         self.assertRedirects(
             response,
-            f'{reverse("account_login")}?next={reverse("submit_review", args=[self.product.id])}'
+            f'{reverse("account_login")}?next={
+                reverse("submit_review", args=[self.product.id])}'
         )
 
     def test_reviews_list_view(self):
@@ -79,7 +81,6 @@ class ReviewViewsTestCase(TestCase):
 
         response = self.client.post(reverse('contact'), data)
 
-        # Check if the ContactMessage was created
         self.assertEqual(ContactMessage.objects.count(), 1)
         contact_message = ContactMessage.objects.first()
         self.assertEqual(contact_message.name, 'Test User')
@@ -88,15 +89,13 @@ class ReviewViewsTestCase(TestCase):
 
         self.assertRedirects(response, reverse('contact'))
 
-        # Check for success message
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(str(messages[0]), 'Your message has been sent!')
 
-        # Check that an email was sent to the admin
         admin_email = User.objects.get(username='admin').email
         self.assertEqual(len(mail.outbox), 2)
-        self.assertEqual(mail.outbox[0].to, [admin_email])  # Admin email
-        self.assertEqual(mail.outbox[1].to, ['testuser@example.com'])  # User confirmation email
+        self.assertEqual(mail.outbox[0].to, [admin_email])
+        self.assertEqual(mail.outbox[1].to, ['testuser@example.com'])
 
     def test_contact_form_invalid(self):
         # Make a POST request with invalid data
@@ -112,4 +111,36 @@ class ReviewViewsTestCase(TestCase):
         self.assertEqual(ContactMessage.objects.count(), 0)
 
         # Check if the page returns with errors
-        self.assertFormError(response, 'form', 'message', 'This field is required.')
+        self.assertFormError(
+            response, 'form', 'message', 'This field is required.')
+
+
+class ReviewDeleteTestCase(TestCase):
+    def setUp(self):
+        """Create a test product and user to simulate review deletion."""
+        self.product = Product.objects.create(
+            name="Test Product", price=100.00, description="A test product.")
+        self.user = User.objects.create_user(
+            username='testuser', password='testpassword')
+        self.review = Review.objects.create(
+            product=self.product,
+            user=self.user,
+            comment="Great product!",
+            rating=4.5
+        )
+
+    def test_review_deletion(self):
+        """Test that a review can be
+        deleted and the user is redirected to their profile page."""
+
+        self.assertEqual(Review.objects.count(), 1)
+
+        self.client.login(username='testuser', password='testpassword')
+
+        delete_url = reverse('delete_review', args=[self.review.id])
+
+        response = self.client.post(delete_url)
+
+        self.assertEqual(Review.objects.count(), 0)
+
+        self.assertRedirects(response, reverse('profile'))

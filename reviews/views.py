@@ -90,13 +90,16 @@ def contact_view(request):
     return render(request, 'contact/contact.html', {'form': form})
 
 
-@login_required
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
 
     if review.user != request.user:
-        return HttpResponseForbidden("You cant do this")
+        return HttpResponseForbidden("You can't do this")
+
+    product_id = review.product.id
 
     review.delete()
+
     messages.success(request, 'Your review has been deleted.')
-    return redirect('reviews_list')
+
+    return redirect('profile')
