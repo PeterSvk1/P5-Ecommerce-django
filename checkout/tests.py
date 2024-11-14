@@ -160,3 +160,26 @@ class OrderTests(TestCase):
         self.assertEqual(Order.objects.count(), 1)
         self.assertEqual(order.order_number, self.user)
         self.assertEqual(order.full_name, "Test User")
+
+
+class OrderLineItemSignalTests(TestCase):
+
+    def setUp(self):
+        # Create a test order and product
+        self.order = Order.objects.create(
+            full_name='Test User',
+            email='test@example.com',
+            phone_number='1234567890',
+            country='Testland',
+            postcode='12345',
+            town_or_city='Test City',
+            street_address1='123 Test Street',
+            street_address2='',
+            county='Test County'
+        )
+
+        self.product = Product.objects.create(
+            name='Test Product',
+            price=10.00,
+            description='A test product'
+        )

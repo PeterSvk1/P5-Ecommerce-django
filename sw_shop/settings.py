@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
                 '8000-petersvk1-p5ecommercedj-e10t39srj5d.ws.codeinstitute-ide.net',
@@ -113,23 +113,23 @@ TEMPLATES = [
 WSGI_APPLICATION = 'sw_shop.wsgi.application'
 
 LOGIN_REDIRECT_URL = '/products/'
-LOGOUT_REDIRECT_URL = '/products/'
+LOGOUT_REDIRECT_URL = '/'
 
 SITE_ID = 1
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-        'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 #DATABASES = {
-#   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#        'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
 #}
+
+DATABASES = {
+   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

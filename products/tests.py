@@ -174,7 +174,7 @@ class ProductCRUDTestCase(TestCase):
         response = self.client.post(
             reverse('delete_product', args=[self.product.id]))
         self.assertEqual(
-            response.status_code, 302)  # Redirect to products list
+            response.status_code, 302)
 
         with self.assertRaises(Product.DoesNotExist):
             Product.objects.get(id=self.product.id)
