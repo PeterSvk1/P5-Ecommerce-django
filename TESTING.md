@@ -324,4 +324,22 @@ The website has been tested thoroughly on several different browsers.
 * Safari
 * Opera
 
+
+### Google Chrome Lighthouse
+
+Lighthouse was used to test performance, Accesibility, Best Practices and SEO of the website.
+Perfomance may be different across all web pages. Accesibility stays over 80+ across all pages.
+
+Desktop Results:
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/lighthouse_deskop.png">
+</p>
+
+Mobile Results:
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/lighthouse_mobile.png">
+</p>
+
 [Back to readme](https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/README.md)
