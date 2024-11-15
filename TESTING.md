@@ -345,7 +345,7 @@ Mobile Results:
 
 ## User Story testing
 
-<detail>
+<details>
 
 **EPIC** - Wishlist
 
@@ -563,7 +563,7 @@ Users can navigate back to the product list or continue with other actions like 
 
 **Status**: Pass
 
-</detail>
+</details>
 
 ## Automated testing:
 - This is first time I made some automated tests for my project. Together project has 48 automated tests.
@@ -576,7 +576,7 @@ Please change database to:
 
 To run included tests please write: python manage.py test
 <p align="center">
-<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/.png">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/database_tests.png">
 </p>
 
 <details>
