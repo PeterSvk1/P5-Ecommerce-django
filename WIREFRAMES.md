@@ -70,3 +70,5 @@ Profile page:
 <p align="center">
 <img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/wireframes/signup.png">
 </p>
+
+[Back to readme](https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/README.md)
