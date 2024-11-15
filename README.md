@@ -127,7 +127,7 @@ All my user stories, sprint that can be accessed using GitHub Issues, which serv
 
 ### Wireframes
 
-The wireframes for this project can be accessed [here.]()
+The wireframes for this project can be accessed [here.](https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/WIREFRAMES.md)
 <br><br>
 
 ### Database diagram
