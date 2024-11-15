@@ -71,14 +71,14 @@ class UserAuthTests(TestCase):
             User.objects.filter(email='newuser@example.com').exists())
 
     def test_sign_up_view_password_common(self):
-        # Test sign-up with non-matching passwords
+        # Test sign-up with common passwords
         response = self.client.post(reverse('account_signup'), {
             'username': 'user',
             'password1': 'password123',
             'password2': 'password123',
             'email': 'user@example.com'
         })
-        # Check if the form contains the password mismatch error
+
         self.assertContains(
             response,
             'Your password can’t be a commonly used password.',

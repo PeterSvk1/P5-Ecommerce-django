@@ -561,4 +561,78 @@ Users can navigate back to the product list or continue with other actions like 
 
 **Status**: Pass
 
+## Automated testing:
+- This is first time I made some automated tests for my project. Together project has 48 automated tests.
+Please in order to use automated tests in my project use build in database. 
+
+Please change database to:
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/database.png">
+</p>
+
+To run included tests please write: python manage.py test
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/database.png">
+</p>
+
+<details>
+
+**Bag app**
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/tests_bag.png">
+</p>
+
+**Checkout app**
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/tests_checkout.png">
+</p>
+
+**Errors app**
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/tests_errors.png">
+</p>
+
+**Newsletter app**
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/tests_newsletter.png">
+</p>
+
+**Products app**
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/tests_products.png">
+</p>
+
+**Profiles app**
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/tests_profile.png">
+</p>
+
+**Reviews app**
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/tests_review.png">
+</p>
+
+**sw_shop app**
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/tests_auth.png">
+</p>
+
+**wishlistapp app**
+
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/tests_wishlist.png">
+</p>
+
+</details>
+
+
+
 [Back to readme](https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/README.md)
