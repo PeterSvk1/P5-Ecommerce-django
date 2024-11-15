@@ -58,7 +58,7 @@ The website is built using Django framework, and follows an agile methodology ap
 | 4. | I want to register on the website to place an order or save my shipping details. |
 | 5. | I want to log in to the website once registered.  |
 | 6. | I want to see newsletters on the website. |
-
+| 8. | I want to contact website owners. |
 <br>
 
 |  | As a logged in user |
@@ -69,8 +69,9 @@ The website is built using Django framework, and follows an agile methodology ap
 | 4. | I want to log out from the website. |
 | 5. | I want to rate the product. |
 | 6. | I want to review the product. |
-| 7. | I want to add the product to my wishlist. |
-| 8. | I want to contact website owners. |
+| 7. | I want to delete my review for product. |
+| 8. | I want to add the product to my wishlist. |
+| 9. | I want to contact website owners. |
 
 <br>
 
@@ -126,7 +127,7 @@ All my user stories, sprint that can be accessed using GitHub Issues, which serv
 ## Design
 
 ### Wireframes
-
+Wireframes for mobiles and deskop. These two are the most used by ordinary people.
 The wireframes for this project can be accessed [here.](https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/WIREFRAMES.md)
 <br><br>
 
@@ -176,7 +177,7 @@ Features of this project can be accessed [here.](https://github.com/PeterSvk1/P5
 Facebook page mock up:
 
 <p align="center">
-<img src="">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/readme/fb_mockup.png">
 </p>
 
 X page:
