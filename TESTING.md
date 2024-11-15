@@ -633,6 +633,135 @@ To run included tests please write: python manage.py test
 
 </details>
 
+## Manual testing:
+Added some manual testing too, it includes similar tests like automated tests.
+<details>
+Test plan and results:
 
+### Navigation bar
+
+- As a non-logged in user
+
+| -- |Element| Action | wanted result | Score |
+|  -- |   ---      | ---       |  ----   | ---- |
+| 1 |  	 Logo| click | shows home | pass|
+| 2 |    Search| click | user search for products, word | pass|
+| 3 |    Search| click | shows 0 Products found if user search for random letters ex.:"dgdsfgd" |pass|
+| 4 |    Register| click | redirect to registration page | pass|
+| 5 |    Login| click | redirects to login page | pass|
+| 6 |    Register| display |  	Render for non authenticated users | pass|
+| 7 |    Login| display |  	Render for non authenticated users | pass|
+| 8 |    logout| display |  	does not render for non authenticated users | pass|
+| 9 |    bag| click |  	redirects to bag | pass|
+| 10 |   info - Newsletter| click |  	redirects to newsletter page | pass|
+| 11 |   info - Contact| click |  	redirects to contact page | pass|
+| 12 |   info - All reviews| click |  	redirects to all reviews page | pass|
+| 13 |   Categories| click |  	redirects to pages with selected categories/products | pass|
+
+
+- As a logged in user
+
+| -- |Element| Action | wanted result | Score |
+|  -- |   ---      | ---       |  ----   | ---- |
+| 1 |  	 Logo| click | shows home page | pass|
+| 2 |    Search| click | user search for products, word | pass|
+| 3 |    Search| click | shows 0 Products found if user search for random letters ex.:"dgdsfgd" |pass|
+| 4 |    LogOut| click | redirects to logout page | pass|
+| 5 |    Register| display |  does not render if user is authenticated | pass|
+| 6 |    Login| display |  does not render if user is authenticated | pass|
+| 7 |    LogOut| display |  Render only if user is authenticated | pass|
+| 8 |    bag| click |  	redirects to bag | pass|
+| 9 |    My profile| click | when user clicks on my profile link then its redirected to profile page | pass|
+| 10 |   info - Newsletter| click |  	redirects to newsletter page | pass|
+| 11 |   info - Contact| click |  	redirects to contact page | pass|
+| 12 |   info - All reviews| click |  	redirects to all reviews page | pass|
+| 13 |   Categories| click |  	redirects to pages with selected categories/products | pass|
+
+### Page with all products
+
+- As a non-logged in user/ logged in user
+
+| -- |Element| Action | wanted result | Score |
+|  -- |   ---      | ---       |  ----   | ---- |
+| 1 |  	 product pic| click | redirects to product detail page | pass|
+| 2 |  	 edi/delete| display | doesnt show | pass|
+
+- As a superuser/staff
+
+| -- |Element| Action | wanted result | Score |
+|  -- |   ---      | ---       |  ----   | ---- |
+| 1 |  	 product pic| click | redirects to product detail page | pass|
+| 2 |  	 edi/delete| display | show | pass|
+| 3 |  	 edi/delete| click | edit: redirects to edit page, delete: removes item | pass|
+
+### Page with product_detail
+- As a non-logged in user
+
+| -- |Element| Action | wanted result | Score |
+|  -- |   ---      | ---       |  ----   | ---- |
+| 1 |  	 add to wishlist| click | redirects to log in page | pass|
+| 2 |  	 quantity| click | lets user change quantity of products | pass|
+| 3 |  	 add to bag| click | adds item to bag | pass|
+| 4 |  	 back to products| click | redirects to all products page | pass|
+| 5 |  	 login to make review| click | redirects to log in page | pass|
+
+- As a logged in user
+
+| -- |Element| Action | wanted result | Score |
+|  -- |   ---      | ---       |  ----   | ---- |
+| 1 |  	 add to wishlist| click | adds item to wish list | pass|
+| 2 |  	 quantity| click | lets user change quantity of products | pass|
+| 3 |  	 add to bag| click | adds item to bag | pass|
+| 4 |  	 back to products| click | redirects to all products page | pass|
+| 5 |  	 leave review| write | makes review on product page | pass|
+
+### Bag page
+- As a non-logged in user and logged in user
+
+| -- |Element| Action | wanted result | Score |
+|  -- |   ---      | ---       |  ----   | ---- |
+| 1 |  	 change quantity| click | increases or decreases item qty | pass|
+| 2 |  	 update| click | applies new qty for product | pass|
+| 3 |  	 secure checkout| click | redirects to checkout page | pass|
+| 4 |  	 keep shopping| click | redirects to all products page | pass|
+| 5 |  	 leave review| write | makes review on product page | pass|
+
+### Checkout page
+- As a non-logged in user and logged in user
+
+| -- |Element| Action | wanted result | Score |
+|  -- |   ---      | ---       |  ----   | ---- |
+| 1 |  	 back to bag| click | redirects to bag | pass|
+| 2 |  	 complete order| click | redirects to succes page | pass|
+
+### Product management
+
+- Only for superuser/staff
+
+| -- |Element| Action | wanted result | Score |
+|  -- |   ---      | ---       |  ----   | ---- |
+| 1 |  	add product| click | redirect to product page after success | pass|
+| 2 |  	 cancel| click | redirects to all produts page | pass|
+
+### Registration page and login page.
+
+| -- |Element| Action | wanted result | Score |
+|  -- |   ---      | ---       |  ----   | ---- |
+| 1 |  	 Registration page| click | Lets user register on website after he fills up all fields | pass|
+| 2 |  	 Registration page| click | Wont let user to use same name as other users | pass|
+| 3 |    Login page| click | If user is not registered then login page wont let him logIn | pass|
+| 4 |    Login page| click | If user is registered then login page will let him logIn | pass|
+| 5 |    Login/registration page| click | both forms have to be correctly filled out in order to work | pass|
+
+### Footer
+
+- As a non-logged in user and also as a logged in user. (works for both)
+
+| -- |Element| Action | wanted result | Score |
+|  -- |   ---      | ---       |  ----   | ---- |
+| 1 |  	 Socials| click | opens social links in new window | pass|
+| 2 |    Contact Us| click | redirects user to contact page | pass|
+
+</details>
 
 [Back to readme](https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/README.md)
