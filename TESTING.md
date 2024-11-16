@@ -565,6 +565,12 @@ Users can navigate back to the product list or continue with other actions like 
 
 </details>
 
+### Stripe test
+<p align="center">
+<img src="https://github.com/PeterSvk1/P5-Ecommerce-django/blob/main/assets/testing/stripe.png">
+</p>
+
+
 ## Automated testing:
 - This is first time I made some automated tests for my project. Together project has 48 automated tests.
 Please in order to use automated tests in my project use build in database. 
